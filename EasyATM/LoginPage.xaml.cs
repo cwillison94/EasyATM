@@ -1,0 +1,121 @@
+﻿using EasyATM.Service;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Text.RegularExpressions;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+
+namespace EasyATM
+{
+    /// <summary>
+    /// Interaction logic for LoginPage.xaml
+    /// </summary>
+    public partial class LoginPage : Page
+    {
+        public LoginPage()
+        {
+            InitializeComponent();
+        }
+
+        private void AccountNumberValidationTextBox(object sender, TextCompositionEventArgs e)
+        {
+            // Validate account number text box is valid
+            Regex regex = new Regex("[^0-9]+");
+            e.Handled = regex.IsMatch(e.Text);
+        }
+
+        private void btn0_Click(object sender, RoutedEventArgs e)
+        {
+            AccountNumber.Text = AccountNumber.Text + "0";
+        }
+
+        private void btn1_Click(object sender, RoutedEventArgs e)
+        {
+            AccountNumber.Text = AccountNumber.Text + "1";
+        }
+
+        private void btn2_Click(object sender, RoutedEventArgs e)
+        {
+            AccountNumber.Text = AccountNumber.Text + "2";
+        }
+
+        private void btn3_Click(object sender, RoutedEventArgs e)
+        {
+            AccountNumber.Text = AccountNumber.Text + "3";
+        }
+
+        private void btn4_Click(object sender, RoutedEventArgs e)
+        {
+            AccountNumber.Text = AccountNumber.Text + "4";
+        }
+
+        private void btn5_Click(object sender, RoutedEventArgs e)
+        {
+            AccountNumber.Text = AccountNumber.Text + "5";
+        }
+
+        private void btn6_Click(object sender, RoutedEventArgs e)
+        {
+            AccountNumber.Text = AccountNumber.Text + "6";
+        }
+
+        private void btn7_Click(object sender, RoutedEventArgs e)
+        {
+            AccountNumber.Text = AccountNumber.Text + "7";
+        }
+
+        private void btn8_Click(object sender, RoutedEventArgs e)
+        {
+            AccountNumber.Text = AccountNumber.Text + "8";
+        }
+
+        private void btn9_Click(object sender, RoutedEventArgs e)
+        {
+            AccountNumber.Text = AccountNumber.Text + "9";
+        }
+
+        private void btnBack_Click(object sender, RoutedEventArgs e)
+        {
+            var accountNumber = AccountNumber.Text;
+            if (accountNumber.Length != 0)
+            {
+                AccountNumber.Text = accountNumber.Substring(0, accountNumber.Length - 1);
+            }
+        }
+
+        private void btnLogin_Click(object sender, RoutedEventArgs e)
+        {
+            int accountNumber;
+            
+            if (int.TryParse(AccountNumber.Text, out accountNumber))
+            {
+
+                var clientRequest = ClientAccessManager.Instance.Login(accountNumber);
+                if (clientRequest.Success)
+                {
+                    this.NavigationService.Navigate(new OptionsPage(clientRequest.Client));
+                }
+                else 
+                {
+                    // TODO: Handle client login fail
+                }
+            }
+            else 
+            {
+                // TODO: Handle parsing error - shouldn't happen
+            }
+        }
+    }
+
+
+}

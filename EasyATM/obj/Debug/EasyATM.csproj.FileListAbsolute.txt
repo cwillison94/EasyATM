@@ -1,0 +1,17 @@
+C:\Users\Cole\Documents\GitHub\EasyATM\EasyATM\bin\Debug\EasyATM.exe.config
+C:\Users\Cole\Documents\GitHub\EasyATM\EasyATM\obj\Debug\EasyATM.csprojResolveAssemblyReference.cache
+C:\Users\Cole\Documents\GitHub\EasyATM\EasyATM\obj\Debug\MainWindow.baml
+C:\Users\Cole\Documents\GitHub\EasyATM\EasyATM\obj\Debug\MainWindow.g.cs
+C:\Users\Cole\Documents\GitHub\EasyATM\EasyATM\obj\Debug\App.g.cs
+C:\Users\Cole\Documents\GitHub\EasyATM\EasyATM\obj\Debug\EasyATM_MarkupCompile.cache
+C:\Users\Cole\Documents\GitHub\EasyATM\EasyATM\obj\Debug\EasyATM.g.resources
+C:\Users\Cole\Documents\GitHub\EasyATM\EasyATM\obj\Debug\EasyATM.Properties.Resources.resources
+C:\Users\Cole\Documents\GitHub\EasyATM\EasyATM\obj\Debug\EasyATM.csproj.GenerateResource.Cache
+C:\Users\Cole\Documents\GitHub\EasyATM\EasyATM\bin\Debug\EasyATM.exe
+C:\Users\Cole\Documents\GitHub\EasyATM\EasyATM\bin\Debug\EasyATM.pdb
+C:\Users\Cole\Documents\GitHub\EasyATM\EasyATM\obj\Debug\EasyATM.exe
+C:\Users\Cole\Documents\GitHub\EasyATM\EasyATM\obj\Debug\EasyATM.pdb
+C:\Users\Cole\Documents\GitHub\EasyATM\EasyATM\obj\Debug\LoginPage.baml
+C:\Users\Cole\Documents\GitHub\EasyATM\EasyATM\obj\Debug\LoginPage.g.cs
+C:\Users\Cole\Documents\GitHub\EasyATM\EasyATM\obj\Debug\OptionsPage.baml
+C:\Users\Cole\Documents\GitHub\EasyATM\EasyATM\obj\Debug\OptionsPage.g.cs

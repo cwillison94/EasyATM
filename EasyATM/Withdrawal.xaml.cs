@@ -21,9 +21,6 @@ namespace EasyATM
     /// </summary>
     public partial class Withdrawal : Page
     {
-        private Client client = null;
-        private EasyBankAccount account = null;
-
         private int TotalValue
         {
             get
@@ -32,31 +29,32 @@ namespace EasyATM
             }
         }
 
-        //private DenominationModifier Demon20 = null;
+        private Client client = null;
+        private EasyBankAccount account = null;
+        private int count_5;
+        private int count_10;
+        private int count_20;
+        private int count_50;
+        private int count_100;
 
-        int count_5;
-        int count_10;
-        int count_20;
-        int count_50;
-        int count_100;
-
-        public Withdrawal(Client client, EasyBankAccount account)
+        public Withdrawal(Client client, int accountNumber)
         {
-            this.client = client;
-            this.account = account;
             InitializeComponent();
+
+            this.client = client;
+            this.account = client.GetAccount(accountNumber);
+            this.AccountMessageLabel.Content = this.client.FullName + " : " + this.account.ToString();
 
             count_5 = 0;
             count_10 = 0;
             count_20 = 0;
             count_50 = 0;
             count_100 = 0;
-            //this.Demon20 = new DenominationModifier(20);
         }
 
         private void refreshTotalCount()
         {
-            countTotal.Content = this.TotalValue;
+            countTotal.Content = this.TotalValue.ToString("C");
         }
 
         private void ButtonBack_Click(object sender, RoutedEventArgs e)
@@ -129,6 +127,9 @@ namespace EasyATM
         {
             this.account.Withdraw(this.TotalValue);
             resetCounts();
+            this.NavigationService.Navigate(new OptionsPage(this.client));
+            // TODO: Implenent continue page
+            //this.NavigationService.Navigate(new ContinuePage(this.client));
         }
 
         private void resetCounts()

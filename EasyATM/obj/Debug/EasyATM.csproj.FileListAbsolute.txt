@@ -23,3 +23,5 @@ C:\Users\Cole\Documents\GitHub\EasyATM\EasyATM\obj\Debug\DenominationControl.g.c
 C:\Users\Cole\Documents\GitHub\EasyATM\EasyATM\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\Cole\Documents\GitHub\EasyATM\EasyATM\obj\Debug\EasyATM_MarkupCompile.lref
 C:\Users\Cole\Documents\GitHub\EasyATM\EasyATM\obj\Debug\EasyATM.csprojResolveAssemblyReference.cache
+C:\Users\Cole\Documents\GitHub\EasyATM\EasyATM\obj\Debug\AccountSelect.baml
+C:\Users\Cole\Documents\GitHub\EasyATM\EasyATM\obj\Debug\AccountSelect.g.cs

@@ -48,5 +48,10 @@ namespace EasyATM.Models
         {
             this.Balance -= amount;
         }
+
+        public override string ToString()
+        {
+            return this.Type + " - " + this.AccountNumber;
+        }
     }
 }

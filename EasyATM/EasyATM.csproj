@@ -56,6 +56,9 @@
     <Compile Include="Account.xaml.cs">
       <DependentUpon>Account.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AccountSelect.xaml.cs">
+      <DependentUpon>AccountSelect.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DenominationControl.xaml.cs">
       <DependentUpon>DenominationControl.xaml</DependentUpon>
     </Compile>
@@ -66,6 +69,10 @@
       <DependentUpon>Withdrawal.xaml</DependentUpon>
     </Compile>
     <Page Include="Account.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AccountSelect.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -102,7 +109,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\Account.cs" />
+    <Compile Include="Models\EasyBankAccount.cs" />
     <Compile Include="OptionsPage.xaml.cs">
       <DependentUpon>OptionsPage.xaml</DependentUpon>
     </Compile>

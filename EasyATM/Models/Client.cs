@@ -13,16 +13,24 @@ namespace EasyATM.Models
 
     public class Client
     {
+        private List<EasyBankAccount> accounts = new List<EasyBankAccount>();
+
         public string FirstName { private set; get; }
         public string LastName { private set; get; }
 
-        private List<EasyBankAccount> accounts = new List<EasyBankAccount>();
+        public string FullName 
+        {
+            get
+            {
+                return this.LastName + ", " + this.FirstName;
+            }
+        }
 
         public string WelcomeMessage
         {
             get
             {
-                return "Welcome " + this.LastName + ", " + this.FirstName + "!";
+                return "Welcome " + this.FullName + "!";
             }
         }
 
@@ -41,6 +49,11 @@ namespace EasyATM.Models
         public List<EasyBankAccount> ListAccounts()
         {
             return this.accounts;
+        }
+
+        public EasyBankAccount GetAccount(int accountNumber)
+        {
+            return this.accounts.First(x => x.AccountNumber == accountNumber);
         }
     }
 }

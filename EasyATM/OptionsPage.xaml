@@ -4,7 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       mc:Ignorable="d" 
-	Title="OptionsPage" d:DesignWidth="730.5" d:DesignHeight="932">
+	Title="OptionsPage" d:DesignWidth="1100" d:DesignHeight="750">
     <Grid>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
@@ -21,7 +21,7 @@
                     <Border BorderBrush="Black" BorderThickness="0,0,0,2" VerticalAlignment="Top">
                         <DockPanel Margin="5,5,5,0" Background="{x:Null}">
                             <Label Content="{Binding Type}"  />
-                            <Button Command="{Binding Path=ViewAccountCommand}" Content="View Account" Margin="20,0,0,0" Width="220" Background="#FF096200" FontFamily="Segoe UI Black" Foreground="White" BorderBrush="#FFD6D6D6" HorizontalAlignment="Right" VerticalAlignment="Center" DockPanel.Dock="Right">
+                            <Button Click="ButtonViewAccount_Click" Tag="{Binding AccountNumber}" Content="View Account" Margin="20,0,0,0" Width="220" Background="#FF096200" FontFamily="Segoe UI Black" Foreground="White" BorderBrush="#FFD6D6D6" HorizontalAlignment="Right" VerticalAlignment="Center" DockPanel.Dock="Right">
                             </Button>
                             <Label HorizontalContentAlignment="Right" Content="{Binding AccountNumber}" DockPanel.Dock="Right" />
 
@@ -32,34 +32,15 @@
         </ItemsControl>
         <Label Content="Accounts:&#xD;&#xA;" HorizontalAlignment="Left" Margin="34,80,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" FontSize="20" Height="38"/>
 
-        <Border BorderBrush="Black" BorderThickness="0,0,0,2" VerticalAlignment="Top">
-            <DockPanel Margin="5,5,5,0">
-                
-            <Label Content="Account Number" />
-            <Label Content="Type" HorizontalContentAlignment="Right" />
-                <Button Content="View Account" Margin="0,0,20,0" Width="172" Background="#FF096200" FontFamily="Segoe UI Black" Foreground="White" BorderBrush="#FFD6D6D6" HorizontalAlignment="Right" >
-                    <Button.Effect>
-                        <DropShadowEffect ShadowDepth="3"/>
-                    </Button.Effect>
-                </Button>
+        <Button Content="Finish" Margin="0,0,10,10" Background="#FFC01A22" Click="ButtonFinish_Click" Width="125" Height="71" VerticalAlignment="Bottom" HorizontalAlignment="Right" FontFamily="Segoe UI Black" FontSize="22">
+            <!--<StackPanel HorizontalAlignment="Center">
+                <Image Source="/Resources/back.png" Height="66" Width="94" VerticalAlignment="Bottom" />
+            </StackPanel>
+            -->
+        </Button>
+        <Button Content="Withdrawal" Click="ButtonWithdrawal_Click"  Margin="4,133,260,0" Width="220" Height="71" HorizontalAlignment="Right" FontFamily="Segoe UI Black" FontSize="22" RenderTransformOrigin="0.368,-0.155" VerticalAlignment="Top"/>
+        <Button Content="Deposit" Margin="0,133,20,0" Width="220" Height="71" HorizontalAlignment="Right" FontFamily="Segoe UI Black" FontSize="22" RenderTransformOrigin="0.368,-0.155" VerticalAlignment="Top"/>
+        <Button Content="Transfer" Margin="0,220,260,0" Width="220" Height="71" HorizontalAlignment="Right" FontFamily="Segoe UI Black" FontSize="22" RenderTransformOrigin="0.368,-0.155" VerticalAlignment="Top"/>
 
-            </DockPanel>
-            
-        </Border>
-        <Border BorderBrush="Black" BorderThickness="0,0,0,2" VerticalAlignment="Top" Margin="0,33,0,0">
-            <DockPanel  Margin="5,5,5,0">
-
-                <Label Content="Account Numberdfdfdfdf" />
-                <Button Content="View Account" Margin="0" Width="160" Background="#FF096200" FontFamily="Segoe UI Black" Foreground="White" BorderBrush="#FFD6D6D6" DockPanel.Dock="Right" >
-                    <Button.Effect>
-                        <DropShadowEffect ShadowDepth="3"/>
-                    </Button.Effect>
-                </Button>
-                <Label Content="Type" HorizontalContentAlignment="Right" HorizontalAlignment="Right" DockPanel.Dock="Right" />
-   
-
-            </DockPanel>
-
-        </Border>
     </Grid>
 </Page>

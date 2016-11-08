@@ -13,16 +13,17 @@ namespace EasyATM.Models
         Demo_Saving
     }
 
-    public class Account
+    public class EasyBankAccount
     {
         public int AccountNumber { private set; get; }
         public int Balance { private set; get; }
         public string Type { private set; get; }
+        public Client Client { private set; get; }
 
-        private ICommand viewAccountCommand = null;
-
-        public Account(DemoAccountType demoAccountType) 
+        public EasyBankAccount(Client client, DemoAccountType demoAccountType) 
         {
+            this.Client = client;
+
             switch (demoAccountType)
             {
                 case DemoAccountType.Demo_Chequing:
@@ -38,32 +39,14 @@ namespace EasyATM.Models
             }
         }
 
-        public Account()
+        public EasyBankAccount(Client client)
         {
- 
+            this.Client = client;
         }
 
         public void Withdraw(int amount) 
         {
             this.Balance -= amount;
-        }
-
-        public ICommand ViewAccountCommand
-        {
-            get 
-            { 
-                if (this.viewAccountCommand == null)
-                {
-                    this.viewAccountCommand = new RelayCommand(x => this.ViewAccount()); 
-                }
-
-                return this.viewAccountCommand;
-            }
-        }
-
-        private void ViewAccount()
-        {
-            System.Diagnostics.Debug.WriteLine("View Account " + this.AccountNumber);
         }
     }
 }

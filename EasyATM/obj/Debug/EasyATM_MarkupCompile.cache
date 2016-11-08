@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Cole\Documents\GitHub\EasyATM\EasyATM\App.xaml
-3-1872827755
+6499028092
 
-11-1800273583
+141788032020
 12-1401562060
-LoginPage.xaml;MainWindow.xaml;OptionsPage.xaml;
+Account.xaml;DenominationControl.xaml;LoginPage.xaml;MainWindow.xaml;OptionsPage.xaml;Withdrawal.xaml;
 
 False
 

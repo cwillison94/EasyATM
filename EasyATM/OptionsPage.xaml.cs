@@ -32,5 +32,23 @@ namespace EasyATM
             this.AccountItemControl.ItemsSource = this.client.ListAccounts();
 
         }
+
+        private void ButtonViewAccount_Click(object sender, RoutedEventArgs e)
+        {
+            var control = (Control)sender;
+            var accountNumber = (int) control.Tag;
+            this.NavigationService.Navigate(new Account(this.client, accountNumber));
+        }
+
+        private void ButtonFinish_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new LoginPage());
+        }
+
+        private void ButtonWithdrawal_Click(object sender, RoutedEventArgs e)
+        {
+            // TODO: select account page for withdrawal
+            this.NavigationService.Navigate(new Withdrawal(this.client, null));
+        }
     }
 }

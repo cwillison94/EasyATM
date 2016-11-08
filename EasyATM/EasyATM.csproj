@@ -53,9 +53,26 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Account.xaml.cs">
+      <DependentUpon>Account.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DenominationControl.xaml.cs">
+      <DependentUpon>DenominationControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Models\Client.cs" />
-    <Compile Include="Models\RelayCommand.cs" />
+    <Compile Include="Models\DenominationModifier.cs" />
     <Compile Include="Service\ClientAccessManager.cs" />
+    <Compile Include="Withdrawal.xaml.cs">
+      <DependentUpon>Withdrawal.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Account.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DenominationControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="LoginPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -76,6 +93,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="OptionsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Withdrawal.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -110,6 +131,22 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\100CND.png" />
+    <Resource Include="Resources\10CND.png" />
+    <Resource Include="Resources\20CND.png" />
+    <Resource Include="Resources\50CND.png" />
+    <Resource Include="Resources\5CND.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\minus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\plus.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

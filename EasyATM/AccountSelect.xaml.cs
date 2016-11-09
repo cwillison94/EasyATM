@@ -68,8 +68,8 @@ namespace EasyATM
                     this.NavigationService.Navigate(new Withdrawal(session, accountNumber));
                     break;
                 case AccountSelectType.Deposit:
-                    //TODO: implement me
-                    //this.NavigationService.Navigate(new Deposit(this.client, accountNumber));
+                    
+                    this.NavigationService.Navigate(new DepositOptions(session, accountNumber));
 
                     break;
             }

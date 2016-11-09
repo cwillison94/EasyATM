@@ -36,7 +36,7 @@ namespace EasyATM
        
         private void ButtonYes_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new ContinuePage(session, this.account.Withdraw(amount), withdrawRequired: true, yesHint: "Go back to Main Menu", noHint: "Finish and Dispense Cash"));
+            this.NavigationService.Navigate(new ContinuePage(session, this.account.Withdraw(amount), withdrawRequired: true, yesHint: "Go back to Main Menu", noHint: "Logout and Dispense Cash"));
         }
 
         private void ButtonNo_Click(object sender, RoutedEventArgs e)

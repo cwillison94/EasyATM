@@ -22,25 +22,32 @@ namespace EasyATM
     public partial class TransferConfirmation : Page
     {
         private OptionsPage session;
-        private EasyBankTransfer transfer;
+        private Transfer transferSession;
+        private EasyBankAccount fromAccount;
+        private EasyBankAccount toAccount;
+        private float transferAmount;
 
-        public TransferConfirmation(OptionsPage session, EasyBankTransfer transfer)
+        public TransferConfirmation(OptionsPage session, Transfer transferSession, EasyBankAccount fromAccount, EasyBankAccount toAccount, float transferAmount)
         {
             InitializeComponent();
-            this.transfer = transfer;
             this.session = session;
+            this.transferSession = transferSession;
 
-            this.AcceptTransferLabel.Content = this.transfer.TransferMessage;
+            this.fromAccount = fromAccount;
+            this.toAccount = toAccount;
+            this.transferAmount = transferAmount;
+
+            this.AcceptTransferLabel.Content = this.transferAmount.ToString("C") + " FROM " + this.fromAccount.ToString() + " TO " + this.toAccount.ToString();
         }
 
         private void ButtonYes_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new ContinuePage(this.session, this.transfer.Transfer()));
+            this.NavigationService.Navigate(new ContinuePage(this.session, this.fromAccount.TransferTo(this.toAccount, this.transferAmount)));
         }
 
         private void ButtonNo_Click(object sender, RoutedEventArgs e)
         {
-
+            this.NavigationService.Navigate(this.transferSession);
         }
     }
 }

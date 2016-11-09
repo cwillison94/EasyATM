@@ -32,7 +32,7 @@
         </ItemsControl>
         <Label Content="Accounts:&#xD;&#xA;" HorizontalAlignment="Left" Margin="34,80,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" FontSize="20" Height="38"/>
 
-        <Button Content="Finish" Margin="0,0,10,10" Background="#FFC01A22" Click="ButtonFinish_Click" Width="200" Height="70" VerticalAlignment="Bottom" HorizontalAlignment="Right" FontFamily="Segoe UI Black" FontSize="22">
+        <Button Content="Logout" Margin="10,1,0,10" Background="#FFF32C0C" Click="ButtonFinish_Click" Width="200" Height="70" VerticalAlignment="Bottom" HorizontalAlignment="Left" FontFamily="Segoe UI Black" FontSize="22">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>

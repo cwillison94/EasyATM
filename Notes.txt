@@ -1,0 +1,36 @@
+Account History:
+
+-Date
+-Description
+-Type (withdrawal, deposit)
+-Amount (+/-)
+
+
+PIN Page:
+-Add cancel button
+
+Deposit:
+-Add Back button
+-Add drop shadow and center buttons on page vertically
+-Add some labels and shit
+-Fix margins on page
+-ADD Deposit Confirmation page:
+	-with accept and ask user to insert envelope
+
+Account History Page:
+- move account tpye and balance leftward
+- Quick access to withdraw, deposit, transfer, print
+
+Main Menu:
+-Added print button stuff (multi)
+
+Tranfer Confirmation
+DONE -No doesn't work
+
+Withdrawal Page:
+- add balance and remove name (they know who they are.... derp)
+
+Withdrawal Confirmation:
+- change verbiage to "Confirm" instead of "Accept" 
+- add account information ie. Withdrawal of $80 from Savings 121212122
+

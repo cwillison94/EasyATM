@@ -16,7 +16,9 @@ namespace EasyATM.Models
     public enum TransactionType
     {
         Widthdraw, 
-        Deposit
+        Deposit,
+        TransferOut, 
+        TransferIn
     }
 
     public class TransactionItem
@@ -53,13 +55,24 @@ namespace EasyATM.Models
                     this.AccountNumber = 21089688;
                     this.Balance = 2000.00F;
                     this.Type = "Chequeing";
+                    PopulateSimulatedHistory();
                     break;
                 case DemoAccountType.Demo_Saving:
                     this.AccountNumber = 210696969;
                     this.Balance = 69000.00F;
                     this.Type = "Saving";
+                    PopulateSimulatedHistory();
                     break;
             }
+        }
+
+        private void PopulateSimulatedHistory()
+        {
+            this.transactionHistory.Add(new TransactionItem() { Date = DateTime.Now.AddDays(-60), Description = "McMaster University Tution", Amount = -10000.00F, Type = TransactionType.Widthdraw });
+            this.transactionHistory.Add(new TransactionItem() { Date = DateTime.Now.AddDays(-3), Description = "McDonalds", Amount = -5.50F, Type = TransactionType.Widthdraw });
+            this.transactionHistory.Add(new TransactionItem() { Date = DateTime.Now.AddDays(-2), Description = "ATS Automation - PAY", Amount = 1000.00F, Type = TransactionType.Deposit });
+            this.transactionHistory.Add(new TransactionItem() { Date = DateTime.Now.AddDays(-3), Description = "E 109 - Booze", Amount = -21.75F, Type = TransactionType.Widthdraw });
+            this.transactionHistory.Add(new TransactionItem() { Date = DateTime.Now.AddDays(-3), Description = "ATM Deposit", Amount = 60.00F, Type = TransactionType.Deposit });
         }
 
         public List<TransactionItem> ListTransactionHistory()
@@ -77,13 +90,38 @@ namespace EasyATM.Models
             if (amount > this.Balance)
                 return false;
             else
+            {
                 this.Balance -= amount;
-            return true;
+                this.transactionHistory.Add(new TransactionItem() { Date = DateTime.Now, Description = "EasyBank ATM Withdraw", Amount = -amount, Type = TransactionType.Widthdraw });
+                return true;
+                
+            }
+        }
+
+        public bool TransferTo(EasyBankAccount toAccount, float amount)
+        {
+            if (amount > this.Balance)
+                return false;
+            else 
+            {
+                this.Balance -= amount;
+                toAccount.ReceiveTransfer(this, amount);
+                this.transactionHistory.Add(new TransactionItem() { Date = DateTime.Now, Description = "Transfer to " + toAccount.ToString(), Amount = -amount, Type = TransactionType.TransferOut });
+                return true;
+            }
+        }
+
+        private void ReceiveTransfer(EasyBankAccount fromAccount, float amount)
+        {
+            this.Balance += amount;
+            this.transactionHistory.Add(new TransactionItem() { Date = DateTime.Now, Description = "Received Transfer From " + fromAccount.ToString(), Amount = amount, Type = TransactionType.TransferIn });
+
         }
 
         public void Deposit(float amount)
         {
             this.Balance += amount;
+            this.transactionHistory.Add(new TransactionItem() { Date = DateTime.Now, Description = "EasyBank Deposit", Amount = amount, Type = TransactionType.Deposit });
         }
 
         public override string ToString()

@@ -208,8 +208,7 @@ namespace EasyATM
         private void ButtonTransfer_Click(object sender, RoutedEventArgs e)
         {
             var transferAmount = GetTransferAmount();
-            var transfer = new EasyBankTransfer(this.selectedFromAccount, this.selectedToAccount, transferAmount);
-            this.NavigationService.Navigate(new TransferConfirmation(this.session, transfer));
+            this.NavigationService.Navigate(new TransferConfirmation(this.session, this, this.selectedFromAccount, this.selectedToAccount, transferAmount));
         }
 
         private float GetTransferAmount()

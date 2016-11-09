@@ -32,7 +32,7 @@
             </ItemsControl.ItemTemplate>
         </ItemsControl>
 
-        <Button Margin="10,0,0,10" Background="#FF449316" Click="ButtonBack_Click" Width="200" Height="70" VerticalAlignment="Bottom" HorizontalAlignment="Left">
+        <Button Margin="10,0,0,10" Background="#FFE8FF00" Click="ButtonBack_Click" Width="200" Height="70" VerticalAlignment="Bottom" HorizontalAlignment="Left">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>

@@ -77,7 +77,6 @@
     <Compile Include="Models\Client.cs" />
     <Compile Include="Models\DenominationModifier.cs" />
     <Compile Include="Models\DisableNavigation.cs" />
-    <Compile Include="Models\EasyBankTransfer.cs" />
     <Compile Include="Models\NativeMethods.cs" />
     <Compile Include="Service\ClientAccessManager.cs" />
     <Compile Include="Transfer.xaml.cs">

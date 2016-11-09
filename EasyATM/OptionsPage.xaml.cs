@@ -51,5 +51,10 @@ namespace EasyATM
             // TODO: select account page for withdrawal
             this.NavigationService.Navigate(new AccountSelect(this, AccountSelectType.Withdrawal));
         }
+
+        private void ButtonTransfer_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Transfer(this));
+        }
     }
 }

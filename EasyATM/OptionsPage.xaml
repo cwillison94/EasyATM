@@ -51,7 +51,7 @@
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
-        <Button Content="Transfer" Margin="220,220,0,0" Width="220" Height="70" HorizontalAlignment="Center" FontFamily="Segoe UI Black" FontSize="22" RenderTransformOrigin="0.368,-0.155" VerticalAlignment="Top">
+        <Button Content="Transfer" Click="ButtonTransfer_Click" Margin="220,220,0,0" Width="220" Height="70" HorizontalAlignment="Center" FontFamily="Segoe UI Black" FontSize="22" RenderTransformOrigin="0.368,-0.155" VerticalAlignment="Top">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>

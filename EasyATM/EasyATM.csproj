@@ -65,6 +65,9 @@
     <Compile Include="DenominationControl.xaml.cs">
       <DependentUpon>DenominationControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="EnterPINPage.xaml.cs">
+      <DependentUpon>EnterPINPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Models\Client.cs" />
     <Compile Include="Models\DenominationModifier.cs" />
     <Compile Include="Models\DisableNavigation.cs" />
@@ -93,6 +96,10 @@
     <Page Include="DenominationControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EnterPINPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="LoginPage.xaml">
       <SubType>Designer</SubType>

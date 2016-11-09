@@ -33,7 +33,7 @@
         </ItemsControl>
         <Label Content="Balance:&#xD;&#xA;" HorizontalAlignment="Left" Margin="34,80,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" FontSize="20" Height="38"/>
         <Label x:Name="BalanceMessage" HorizontalAlignment="Left" Margin="125,80,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" FontSize="20" Height="38"/>
-        <Button Margin="10,0,0,10" Background="#FF449316" Click="ButtonBack_Click" Width="125" Height="71" VerticalAlignment="Bottom" HorizontalAlignment="Left">
+        <Button Margin="10,0,0,10" Background="#FF449316" Click="ButtonBack_Click" Width="200" Height="90" VerticalAlignment="Bottom" HorizontalAlignment="Left">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>

@@ -16,14 +16,14 @@
         </Grid.Background>
         <Label Content="EasyBank" HorizontalAlignment="Left" Margin="34,30,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" FontSize="36"/>
         <Label x:Name="ContinueLabel" Content="Would you like to make another transaction?" HorizontalAlignment="Center" Margin="0,86,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" FontSize="36"/>
-        <Button Content="Yes" Click="ButtonAnotherTransaction_Click"  Margin="-320,152,0,9" Width="220" Height="71" HorizontalAlignment="Center" FontFamily="Segoe UI Black" FontSize="22" RenderTransformOrigin="0.368,-0.155" VerticalAlignment="Top">
+        <Button Content="Yes" Click="ButtonAnotherTransaction_Click"  Margin="-320,152,0,9" Width="220" Height="70" HorizontalAlignment="Center" FontFamily="Segoe UI Black" FontSize="22" RenderTransformOrigin="0.368,-0.155" VerticalAlignment="Top">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
         <Label x:Name="YesActionHint" Content="Yes Action Hint" HorizontalAlignment="Center" Margin="-332,230,0,0" VerticalAlignment="Top" FontFamily="Segoe UI" FontSize="22"/>
 
-        <Button Content="No" Click="ButtonComplete_Click" HorizontalContentAlignment="Center" Margin="320,152,0,9" Width="220" Height="71" HorizontalAlignment="Center" FontFamily="Segoe UI Black" FontSize="22" RenderTransformOrigin="0.368,-0.155" VerticalAlignment="Top">
+        <Button Content="No" Click="ButtonComplete_Click" HorizontalContentAlignment="Center" Margin="320,152,0,9" Width="220" Height="70" HorizontalAlignment="Center" FontFamily="Segoe UI Black" FontSize="22" RenderTransformOrigin="0.368,-0.155" VerticalAlignment="Top">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>

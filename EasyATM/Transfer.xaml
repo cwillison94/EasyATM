@@ -1,0 +1,32 @@
+﻿<Page x:Class="EasyATM.Transfer"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignWidth="1100" d:DesignHeight="750"
+	Title="Transfer">
+
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                <GradientStop Color="#FF23A016" Offset="0.364"/>
+                <GradientStop Color="#FFB2F1AF" Offset="1"/>
+                <GradientStop Color="#FF23A016" Offset="0.04"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <Label Content="EasyBank Transfer" HorizontalAlignment="Left" Margin="34,30,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" FontSize="36"/>
+
+        <Label Content="From:&#xD;&#xA;" HorizontalAlignment="Center" Margin="-660,109,0,-70" VerticalAlignment="Top" FontFamily="Segoe UI Black" FontSize="20" Height="38"/>
+        <Label Content="Selected Account:&#xD;&#xA;" HorizontalAlignment="Center" Margin="-852,163,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" FontSize="20" Height="38"/>
+        <Label x:Name="SelectFromAccountLabel" Content="Test Account - 12030343" HorizontalAlignment="Center" Margin="-709,189,0,0" VerticalAlignment="Top" FontFamily="Segoe UI" FontSize="20" Height="38" BorderThickness="0,0,0,2" BorderBrush="Black"/>
+
+        <Label Content="$" HorizontalAlignment="Center" Margin="-220,109,0,-70" VerticalAlignment="Top" FontFamily="Segoe UI Black" FontSize="20" Height="38"/>
+        <TextBox x:Name="AccountNumber" PreviewTextInput="AccountNumberValidationTextBox" TextAlignment="Center" Margin="45,-490,45,0" TextWrapping="Wrap" ToolTip="Enter Account Number" FontSize="24" Width="196" Height="40" HorizontalAlignment="Center"/>
+        <Label Content="To:&#xD;&#xA;" HorizontalAlignment="Center" Margin="660,109,0,-70" VerticalAlignment="Top" FontFamily="Segoe UI Black" FontSize="20" Height="38"/>
+        <Label Content="Selected Account:&#xD;&#xA;" HorizontalAlignment="Center" Margin="-852,163,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" FontSize="20" Height="38"/>
+        <Label x:Name="SelectToAccountLabel" Content="Test Account - 12030343" HorizontalAlignment="Center" Margin="-709,189,0,0" VerticalAlignment="Top" FontFamily="Segoe UI" FontSize="20" Height="38" BorderThickness="0,0,0,2" BorderBrush="Black"/>
+
+    </Grid>
+</Page>

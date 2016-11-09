@@ -22,6 +22,7 @@ namespace EasyATM
     public partial class OptionsPage : Page
     {
         private Client client; 
+            
         public OptionsPage(Client client)
         {
             this.client = client;

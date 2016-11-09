@@ -132,7 +132,7 @@ namespace EasyATM
             if(passwordBox.Password.Length == 4)
             {
                 var clientRequest = ClientAccessManager.Instance.Login(accountNumber);
-                if (clientRequest.Success)
+                if (passwordBox.Password != "0000" && clientRequest.Success)
                 {
                     this.NavigationService.Navigate(new OptionsPage(clientRequest.Client));
                 }

@@ -67,14 +67,15 @@ Temporary Items
 *.tmp_proj
 *.log
 *.vspscc
+*.suo
 *.vssscc
 .builds
 *.pidb
 *.log
 *.scc
 
+bin
 */**/bin/Debug
 */**/bin/Release
 */**/obj/Debug
 */**/obj/Release
-EasyATM.v12.suo

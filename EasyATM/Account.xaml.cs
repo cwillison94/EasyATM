@@ -31,7 +31,8 @@ namespace EasyATM
             this.selectedClient = client;
             this.selectedAccount = client.ListAccounts().First(x => x.AccountNumber == accountNumber);
             this.AccountMessage.Content = this.selectedAccount.Type + " - " + this.selectedAccount.AccountNumber;
-            this.BalanceMessage.Content = this.selectedAccount.Balance.ToString("C", CultureInfo.CurrentCulture);
+            this.BalanceLabel.Content = this.selectedAccount.BalanceFormatted;
+            this.HistoryListView.ItemsSource = this.selectedAccount.ListTransactionHistory();
         }
 
         private void ButtonBack_Click(object sender, RoutedEventArgs e)

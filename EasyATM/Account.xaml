@@ -15,24 +15,9 @@
             </LinearGradientBrush>
         </Grid.Background>
         <Label Content="EasyBank Account History" HorizontalAlignment="Left" Margin="34,30,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" FontSize="36"/>
-        <Label x:Name="AccountMessage" Content="Default Welcome message!" HorizontalContentAlignment="Right" Margin="0,56,17,0" VerticalAlignment="Top" RenderTransformOrigin="1.447,-0.615" FontSize="20"/>
-        <ItemsControl x:Name="AccountItemControl" ItemsSource="{Binding Accounts}" HorizontalAlignment="Left" Margin="60,130,0,0" VerticalAlignment="Top" FontSize="20" BorderBrush="Black">
-            <ItemsControl.ItemTemplate>
-                <DataTemplate>
-                    <Border BorderBrush="Black" BorderThickness="0,0,0,2" VerticalAlignment="Top">
-                        <DockPanel Margin="5,5,5,0" Background="{x:Null}">
-                            <Label Content="{Binding Type}"  />
-                            <Button Command="{Binding Path=ViewAccountCommand}" Content="View Account" Margin="20,0,0,0" Width="220" Background="#FF096200" FontFamily="Segoe UI Black" Foreground="White" BorderBrush="#FFD6D6D6" HorizontalAlignment="Right" VerticalAlignment="Center" DockPanel.Dock="Right">
-                            </Button>
-                            <Label HorizontalContentAlignment="Right" Content="{Binding AccountNumber}" DockPanel.Dock="Right" />
 
-                        </DockPanel>
-                    </Border>
-                </DataTemplate>
-            </ItemsControl.ItemTemplate>
-        </ItemsControl>
-        <Label Content="Balance:&#xD;&#xA;" HorizontalAlignment="Left" Margin="34,80,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" FontSize="20" Height="38"/>
-        <Label x:Name="BalanceMessage" HorizontalAlignment="Left" Margin="125,80,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" FontSize="20" Height="38"/>
+        <Label Content="Account:&#xD;&#xA;" HorizontalAlignment="Left" Margin="34,80,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" FontSize="20" Height="38"/>
+        <Label x:Name="AccountMessage" HorizontalAlignment="Left" Margin="125,80,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" FontSize="20" Height="38"/>
         <Button Margin="10,0,0,10" Background="#FFE8FF00" Click="ButtonBack_Click" Width="200" Height="70" VerticalAlignment="Bottom" HorizontalAlignment="Left">
             <Button.Effect>
                 <DropShadowEffect/>
@@ -41,12 +26,19 @@
                 <Image Source="/Resources/back.png" Height="66" Width="94" VerticalAlignment="Bottom" />
             </StackPanel>
         </Button>
-        <ListView HorizontalAlignment="Left" Height="113" Margin="228,168,0,0" VerticalAlignment="Top" Width="373">
+        <ListView x:Name="HistoryListView" Margin="40,156,403,0" VerticalAlignment="Top" Foreground="Black">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn/>
+                    <GridViewColumn Header="Date" DisplayMemberBinding="{Binding Date}" />
+                    <GridViewColumn Header="Description"  DisplayMemberBinding="{Binding Description}" />
+                    <GridViewColumn Header="Amount" DisplayMemberBinding="{Binding AmountFormatted}" />
+                    <GridViewColumn Header="Type" DisplayMemberBinding="{Binding Type}" />
+
                 </GridView>
             </ListView.View>
         </ListView>
+        <Label Content="Balance:&#xA;" HorizontalAlignment="Left" Margin="34,108,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" FontSize="20" Height="38"/>
+        <Label x:Name="BalanceLabel" HorizontalAlignment="Left" Margin="125,110,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" FontSize="20" Height="38"/>
+
     </Grid>
 </Page>

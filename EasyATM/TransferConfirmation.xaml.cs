@@ -42,7 +42,7 @@ namespace EasyATM
 
         private void ButtonYes_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new ContinuePage(this.session, this.fromAccount.TransferTo(this.toAccount, this.transferAmount)));
+            this.NavigationService.Navigate(new ContinuePage(this.session, this.fromAccount.TransferTo(this.toAccount, this.transferAmount), yesHint: "Go back to Main Menu", noHint: "Logout"));
         }
 
         private void ButtonNo_Click(object sender, RoutedEventArgs e)

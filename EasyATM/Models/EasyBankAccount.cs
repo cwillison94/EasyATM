@@ -27,6 +27,13 @@ namespace EasyATM.Models
         public TransactionType Type { get; set; }
         public string Description { get; set; }
         public float Amount { get; set; }
+        public string AmountFormatted 
+        {
+            get
+            {
+                return this.Amount.ToString("C");
+            }
+        }
     }
 
     public class EasyBankAccount

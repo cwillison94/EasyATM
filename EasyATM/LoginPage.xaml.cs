@@ -1,5 +1,4 @@
-﻿using EasyATM.Service;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -113,16 +112,7 @@ namespace EasyATM
             
             if (int.TryParse(AccountNumber.Text, out accountNumber))
             {
-
-                var clientRequest = ClientAccessManager.Instance.Login(accountNumber);
-                if (clientRequest.Success)
-                {
-                    this.NavigationService.Navigate(new OptionsPage(clientRequest.Client));
-                }
-                else 
-                {
-                    // TODO: Handle client login fail
-                }
+                NavigationService.Navigate(new EnterPINPage(accountNumber));
             }
             else 
             {

@@ -16,7 +16,7 @@
             </LinearGradientBrush>
         </Grid.Background>
         <Label Content="EasyBank ATM" HorizontalAlignment="Left" Margin="34,30,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" FontSize="36"/>
-        <Label Content="Please Enter your PIN Number" Margin="0,-490,0,0" FontSize="22" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <Label Content="Please Enter your PIN Number" Margin="0,0,0,516" FontSize="22" VerticalAlignment="Center" HorizontalAlignment="Center"/>
         <Button Content="1" HorizontalAlignment="Center" Margin="-200,0,0,270" VerticalAlignment="Center" Width="80" Height="80" FontFamily="Segoe UI Black" FontSize="24" Click="btn1_Click"/>
         <Button Content="2" HorizontalAlignment="Center" Margin="0,0,0,270" VerticalAlignment="Center" Width="80" Height="80" FontFamily="Segoe UI Black" FontSize="24" Click="btn2_Click"/>
         <Button Content="3" HorizontalAlignment="Center" Margin="0,0,-200,270" VerticalAlignment="Center" Width="80" Height="80" FontFamily="Segoe UI Black" FontSize="24" Click="btn3_Click"/>
@@ -29,7 +29,7 @@
         <Button Content="Back" HorizontalAlignment="Center" Margin="-200,0,0,-270" VerticalAlignment="Center" Width="80" Height="80" FontFamily="Segoe UI Black" FontSize="24" Click="btnBack_Click"/>
         <Button Content="0" HorizontalAlignment="Center" Margin="0,0,0,-270" VerticalAlignment="Center" Width="80" Height="80" FontFamily="Segoe UI Black" FontSize="24" Click="btn0_Click"/>
         <Button x:Name="btnLogin" Content="OK" HorizontalAlignment="Center" Margin="0,0,-200,-270" VerticalAlignment="Center" Width="80" Height="80" FontFamily="Segoe UI Black" FontSize="24" Click="btnLogin_Click" IsEnabled="False"/>
-        <PasswordBox x:Name="passwordBox" HorizontalAlignment="Center" Height="41" Margin="0,154,0,0" VerticalAlignment="Top" Width="280" HorizontalContentAlignment="Center" FontSize="24"/>
-        <Label x:Name="label" Content="Incorrect PIN, please try again." HorizontalAlignment="Center" Height="74" Margin="0,0,0,85" VerticalAlignment="Bottom" Width="606" Background="#FFD60F0F" FontSize="36" HorizontalContentAlignment="Center" Visibility="Hidden"/>
+        <PasswordBox x:Name="passwordBox" HorizontalAlignment="Center" Height="41" Margin="0,0,0,420" VerticalAlignment="Center" Width="280" HorizontalContentAlignment="Center" FontSize="24"/>
+        <Label x:Name="label" Content="Incorrect PIN, please try again." HorizontalAlignment="Center" Height="74" Margin="0,450,0,0" VerticalAlignment="Center" Width="606" Background="#FFD60F0F" FontSize="36" HorizontalContentAlignment="Center" Visibility="Hidden"/>
     </Grid>
 </Page>

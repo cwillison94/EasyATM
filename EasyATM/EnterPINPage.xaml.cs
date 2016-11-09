@@ -35,6 +35,7 @@ namespace EasyATM
             if (passwordBox.Password.Length < 4)
             {
                 passwordBox.Password = passwordBox.Password + 0;
+                label.Visibility = Visibility.Hidden;
                 if (passwordBox.Password.Length == 4) btnLogin.IsEnabled = true;
             }
         }
@@ -44,6 +45,7 @@ namespace EasyATM
             if (passwordBox.Password.Length < 4)
             {
                 passwordBox.Password = passwordBox.Password + 1;
+                label.Visibility = Visibility.Hidden;
                 if (passwordBox.Password.Length == 4) btnLogin.IsEnabled = true;
             }
         }
@@ -53,6 +55,7 @@ namespace EasyATM
             if (passwordBox.Password.Length < 4)
             {
                 passwordBox.Password = passwordBox.Password + 2;
+                label.Visibility = Visibility.Hidden;
                 if (passwordBox.Password.Length == 4) btnLogin.IsEnabled = true;
             }
         }
@@ -62,6 +65,7 @@ namespace EasyATM
             if (passwordBox.Password.Length < 4)
             {
                 passwordBox.Password = passwordBox.Password + 3;
+                label.Visibility = Visibility.Hidden;
                 if (passwordBox.Password.Length == 4) btnLogin.IsEnabled = true;
             }
         }
@@ -71,6 +75,7 @@ namespace EasyATM
             if (passwordBox.Password.Length < 4)
             {
                 passwordBox.Password = passwordBox.Password + 4;
+                label.Visibility = Visibility.Hidden;
                 if (passwordBox.Password.Length == 4) btnLogin.IsEnabled = true;
             }
         }
@@ -80,6 +85,7 @@ namespace EasyATM
             if (passwordBox.Password.Length < 4)
             {
                 passwordBox.Password = passwordBox.Password + 5;
+                label.Visibility = Visibility.Hidden;
                 if (passwordBox.Password.Length == 4) btnLogin.IsEnabled = true;
             }
         }
@@ -89,6 +95,7 @@ namespace EasyATM
             if (passwordBox.Password.Length < 4)
             {
                 passwordBox.Password = passwordBox.Password + 6;
+                label.Visibility = Visibility.Hidden;
                 if (passwordBox.Password.Length == 4) btnLogin.IsEnabled = true;
             }
         }
@@ -98,6 +105,7 @@ namespace EasyATM
             if (passwordBox.Password.Length < 4)
             {
                 passwordBox.Password = passwordBox.Password + 7;
+                label.Visibility = Visibility.Hidden;
                 if (passwordBox.Password.Length == 4) btnLogin.IsEnabled = true;
             }
         }
@@ -107,6 +115,7 @@ namespace EasyATM
             if (passwordBox.Password.Length < 4)
             {
                 passwordBox.Password = passwordBox.Password + 8;
+                label.Visibility = Visibility.Hidden;
                 if (passwordBox.Password.Length == 4) btnLogin.IsEnabled = true;
             }
         }
@@ -116,6 +125,7 @@ namespace EasyATM
             if (passwordBox.Password.Length < 4)
             {
                 passwordBox.Password = passwordBox.Password + 9;
+                label.Visibility = Visibility.Hidden;
                 if (passwordBox.Password.Length == 4) btnLogin.IsEnabled = true;
             }
         }
@@ -123,7 +133,6 @@ namespace EasyATM
         private void btnBack_Click(object sender, RoutedEventArgs e)
         {
             btnLogin.IsEnabled = false;
-            label.Visibility = Visibility.Hidden;
             if (passwordBox.Password.Length > 0) passwordBox.Password = passwordBox.Password.Remove(passwordBox.Password.Length -1);
         }
 
@@ -139,6 +148,8 @@ namespace EasyATM
                 else
                 {
                     label.Visibility = Visibility.Visible;
+                    passwordBox.Clear();
+                    btnLogin.IsEnabled = false;
                 }
             }
         }

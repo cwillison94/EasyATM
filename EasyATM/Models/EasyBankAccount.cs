@@ -17,6 +17,13 @@ namespace EasyATM.Models
     {
         public int AccountNumber { private set; get; }
         public float Balance { private set; get; }
+        public string BalanceFormatted 
+        {
+            get
+            {
+                return this.Balance.ToString("C");
+            }
+        }
         public string Type { private set; get; }
         public Client Client { private set; get; }
 
@@ -44,7 +51,7 @@ namespace EasyATM.Models
             this.Client = client;
         }
 
-        public bool Withdraw(int amount) 
+        public bool Withdraw(float amount) 
         {
             //TODO: implement balance checking
             this.Balance -= amount;

@@ -111,11 +111,13 @@ namespace EasyATM
         private void btnBack_Click(object sender, RoutedEventArgs e)
         {
             int pos = DepositAmount.Text.Length - 1;
+            if (decimalPostitions > 0) decimalPostitions--;
             if (DepositAmount.Text.Length > 0) DepositAmount.Text = DepositAmount.Text.Remove(pos);
             if (pos == decimalLocation)
             {
                 btnDecimal.IsEnabled = true;
                 decimalLocation = -1;
+                decimalState = false;
             }
         }
 

@@ -23,10 +23,22 @@
 
 
         <Label Content="Selected Account:&#xD;&#xA;" HorizontalAlignment="Center" Margin="-852,163,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" FontSize="20" Height="38"/>
+
+        <Image Source="/Resources/back.png" Height="32" Width="32" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,138,0,0" RenderTransformOrigin="0.5,0.5" >
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="180"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+
         <Label x:Name="SelectFromAccountLabel" Content="Select an Account" HorizontalContentAlignment="Center" Margin="-699,195,0,0" VerticalAlignment="Top" FontFamily="Segoe UI" FontSize="20" Height="38" BorderThickness="0" BorderBrush="Black"/>
         <Separator HorizontalAlignment="Center" Width="283" Background="Black" Margin="-685,225,0,0" VerticalAlignment="Top"></Separator>
         <Label Content="$" HorizontalAlignment="Center" Margin="429,166,649,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" FontSize="20" Height="38"/>
-        <TextBox x:Name="TransferAmountTextBox" TextAlignment="Center" Margin="0,167,0,0" TextWrapping="Wrap" ToolTip="Enter Account Number" FontSize="24" Width="196" Height="40" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <TextBox x:Name="TransferAmountTextBox" TextAlignment="Center" Margin="0,167,0,0" TextWrapping="Wrap" ToolTip="Enter Account Number" FontSize="24" Width="196" Height="40" HorizontalAlignment="Center" VerticalAlignment="Top" TextChanged="TransferAmountTextBox_TextChanged"/>
         <Label Content="To:&#xD;&#xA;" HorizontalAlignment="Center" Margin="375,120,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" FontSize="20" Height="38"/>
 
         <Label Content="Selected Account:&#xD;&#xA;" HorizontalAlignment="Center" Margin="522,163,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" FontSize="20" Height="38"/>
@@ -44,7 +56,7 @@
         <Button Content="9" HorizontalAlignment="Center" Margin="200,400,0,0" VerticalAlignment="Top" Width="80" Height="80" FontFamily="Segoe UI Black" FontSize="24" Click="btn9_Click"/>
         <Button Content="Back" HorizontalAlignment="Center" Margin="410,490,610,0" VerticalAlignment="Top" Width="80" Height="80" FontFamily="Segoe UI Black" FontSize="24" Click="btnBack_Click"/>
         <Button Content="0" HorizontalAlignment="Center" Margin="0,490,0,0" VerticalAlignment="Top" Width="80" Height="80" FontFamily="Segoe UI Black" FontSize="24" Click="btn0_Click"/>
-        <Button Content="." HorizontalAlignment="Center" Margin="200,490,0,0" VerticalAlignment="Top" Width="80" Height="80" FontFamily="Segoe UI Black" FontSize="24" Click="btnDot_Click"/>
+        <Button x:Name="ButtonDot" Content="." HorizontalAlignment="Center" Margin="610,490,410,0" VerticalAlignment="Top" Width="80" Height="80" FontFamily="Segoe UI Black" FontSize="24" Click="btnDot_Click"/>
 
         <ItemsControl x:Name="AccountSelectFromItemControl" ItemsSource="{Binding Accounts}" HorizontalAlignment="Center" Margin="-644,249,0,0" VerticalAlignment="Top" FontSize="20" BorderBrush="Black">
             <ItemsControl.ItemTemplate>
@@ -87,5 +99,11 @@
             </StackPanel>
         </Button>
 
+        <Button x:Name="ButtonTransfer" Content="Transfer"  Margin="0,0,10,10" Background="#FF38EACA" Click="ButtonTransfer_Click" Width="200" Height="71" VerticalAlignment="Bottom" HorizontalAlignment="Right" FontSize="22" FontFamily="Segoe UI Black" IsEnabled="False">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+      
     </Grid>
 </Page>

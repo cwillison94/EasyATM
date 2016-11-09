@@ -23,9 +23,11 @@ namespace EasyATM
     {
         private OptionsPage session;
 
-        public ContinuePage(OptionsPage session, bool success)
+        public ContinuePage(OptionsPage session, bool success, string yesHint = "", string noHint = "")
         {
             InitializeComponent();
+            this.YesActionHint.Text = yesHint;
+            this.NoActionHint.Text = noHint;
             this.session = session;
             if (success)
             {

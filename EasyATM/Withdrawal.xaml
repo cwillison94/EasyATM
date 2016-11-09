@@ -35,7 +35,8 @@
             </Button>
 
         </StackPanel>
-        <Button Margin="10,0,0,10" Background="#FFF33F3F" Click="ButtonBack_Click" Width="200" Height="70" VerticalAlignment="Bottom" HorizontalAlignment="Left">
+        <!-- Background="#FFF33F3F"-->
+        <Button Margin="10,0,0,10" Background="#FF449316" Click="ButtonBack_Click" Width="200" Height="70" VerticalAlignment="Bottom" HorizontalAlignment="Left">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>

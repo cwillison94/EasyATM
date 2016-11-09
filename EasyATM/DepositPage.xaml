@@ -29,7 +29,7 @@
         <Button Content="9" HorizontalAlignment="Center" Margin="580,425,440,245" VerticalAlignment="Center" Width="80" Height="80" FontFamily="Segoe UI Black" FontSize="24" Click="btn9_Click"/>
         <Button x:Name="btnDecimal" Content="." HorizontalAlignment="Center" Margin="580,515,440,155" VerticalAlignment="Center" Width="80" Height="80" FontFamily="Segoe UI Black" FontSize="24" Click="btnDecimal_Click"/>
         <Button Content="0" HorizontalAlignment="Center" Margin="480,515,540,155" VerticalAlignment="Center" Width="80" Height="80" FontFamily="Segoe UI Black" FontSize="24" Click="btn0_Click"/>
-        <Button Content="Backspace&#xD;&#xA;" HorizontalAlignment="Center" Margin="299,515,640,155" VerticalAlignment="Center" Width="161" Height="80" FontFamily="Segoe UI Black" FontSize="24" Click="btnBack_Click" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Center" Padding="1,0,1,-7"/>
+        <Button Content="Back&#xD;&#xA;" HorizontalAlignment="Center" Margin="-261,359,0,0" VerticalAlignment="Center" Width="80" Height="80" FontFamily="Segoe UI Black" FontSize="24" Click="btnBack_Click" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Center" Padding="1,0,1,-7"/>
         <Button x:Name="buttonAccept" Content="Accept" HorizontalAlignment="Center" Height="108" Margin="828,543,72,99" VerticalAlignment="Center" Width="200" Background="#FF0099D3" FontSize="36" Click="buttonAccept_Click"/>
     </Grid>
 </Page>

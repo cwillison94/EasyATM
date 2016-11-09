@@ -21,14 +21,17 @@
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
-        <Label x:Name="YesActionHint" Content="Yes Action Hint" HorizontalAlignment="Center" Margin="324,464,620,0" VerticalAlignment="Top" FontFamily="Segoe UI" FontSize="22" Width="155"/>
+
+        <TextBlock x:Name="YesActionHint" Text="" TextAlignment="Center" HorizontalAlignment="Center" Margin="8,464,285,0" VerticalAlignment="Top" FontFamily="Segoe UI" FontSize="22" TextWrapping="Wrap" Width="250" />
 
         <Button Content="No" Click="ButtonComplete_Click" HorizontalContentAlignment="Center" Margin="618,386,262,0" Width="220" Height="71" HorizontalAlignment="Center" FontFamily="Segoe UI Black" FontSize="22" RenderTransformOrigin="0.368,-0.155" VerticalAlignment="Top">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
-        <Label x:Name="NoActionHint" Content="No Action Hint" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="649,464,296,0" VerticalAlignment="Top" FontFamily="Segoe UI" FontSize="22" Width="155"/>
+        
+        <TextBlock x:Name="NoActionHint" Text="" TextAlignment="Center" HorizontalAlignment="Center" Margin="0,464,-360,0" VerticalAlignment="Top" FontFamily="Segoe UI" FontSize="22" TextWrapping="Wrap" Width="250" />
+
         <Label x:Name="label" Content="" HorizontalAlignment="Center" Height="129" Margin="300,93,300,0" VerticalAlignment="Top" Width="500" FontSize="36" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
 
     </Grid>

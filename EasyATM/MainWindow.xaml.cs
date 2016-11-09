@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EasyATM.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,6 +26,12 @@ namespace EasyATM
         {
             InitializeComponent();
             NavigationFrame.Navigate(new LoginPage());
+        }
+
+        private void Window_KeyDown(object sender, KeyEventArgs e)
+        {
+            // Block keyboard from being used in the application
+            e.Handled = true;
         }
     }
 }

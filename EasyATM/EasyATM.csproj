@@ -65,15 +65,26 @@
     <Compile Include="DenominationControl.xaml.cs">
       <DependentUpon>DenominationControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DepositOptions.xaml.cs">
+      <DependentUpon>DepositOptions.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DepositPage.xaml.cs">
+      <DependentUpon>DepositPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="EnterPINPage.xaml.cs">
       <DependentUpon>EnterPINPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\Client.cs" />
     <Compile Include="Models\DenominationModifier.cs" />
     <Compile Include="Models\DisableNavigation.cs" />
+    <Compile Include="Models\EasyBankTransfer.cs" />
+    <Compile Include="Models\NativeMethods.cs" />
     <Compile Include="Service\ClientAccessManager.cs" />
     <Compile Include="Transfer.xaml.cs">
       <DependentUpon>Transfer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TransferConfirmation.xaml.cs">
+      <DependentUpon>TransferConfirmation.xaml</DependentUpon>
     </Compile>
     <Compile Include="Withdrawal.xaml.cs">
       <DependentUpon>Withdrawal.xaml</DependentUpon>
@@ -96,6 +107,14 @@
     <Page Include="DenominationControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DepositOptions.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DepositPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="EnterPINPage.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -125,6 +144,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Transfer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TransferConfirmation.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

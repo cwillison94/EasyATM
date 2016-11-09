@@ -34,12 +34,12 @@ namespace EasyATM
             this.account = account;
         }
        
-        private void button_Click(object sender, RoutedEventArgs e)
+        private void ButtonYes_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new ContinuePage(session, this.account.Withdraw(amount)));
+            this.NavigationService.Navigate(new ContinuePage(session, this.account.Withdraw(amount), yesHint: "Go back to Main Menu", noHint: "Remove Card and Dispense Cash"));
         }
 
-        private void button_Copy_Click(object sender, RoutedEventArgs e)
+        private void ButtonNo_Click(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(session);
         }

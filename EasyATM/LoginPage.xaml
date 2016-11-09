@@ -14,7 +14,7 @@
             </LinearGradientBrush>
         </Grid.Background>
         <Label Content="EasyBank ATM" HorizontalAlignment="Left" Margin="34,30,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" FontSize="36"/>
-        <TextBox x:Name="AccountNumber" PreviewTextInput="AccountNumberValidationTextBox" TextAlignment="Center" Margin="45,-400,45,0" TextWrapping="Wrap" ToolTip="Enter Account Number" FontSize="24" Width="500" Height="40" HorizontalAlignment="Center"/>
+        <TextBox x:Name="AccountNumber" PreviewTextInput="AccountNumberValidationTextBox" TextAlignment="Center" Margin="45,-400,45,0" TextWrapping="Wrap" ToolTip="Enter Account Number" FontSize="24" Width="500" Height="40" HorizontalAlignment="Center" TextChanged="AccountNumber_TextChanged"/>
         <Label Content="Please Insert Access Card or Enter Access Number" Margin="0,-490,0,0" FontSize="22" VerticalAlignment="Center" HorizontalAlignment="Center"/>
         <Button Content="1" HorizontalAlignment="Center" Margin="-200,0,0,270" VerticalAlignment="Center" Width="80" Height="80" FontFamily="Segoe UI Black" FontSize="24" Click="btn1_Click"/>
         <Button Content="2" HorizontalAlignment="Center" Margin="0,0,0,270" VerticalAlignment="Center" Width="80" Height="80" FontFamily="Segoe UI Black" FontSize="24" Click="btn2_Click"/>
@@ -27,6 +27,6 @@
         <Button Content="9" HorizontalAlignment="Center" Margin="0,0,-200,-90" VerticalAlignment="Center" Width="80" Height="80" FontFamily="Segoe UI Black" FontSize="24" Click="btn9_Click"/>
         <Button Content="Back" HorizontalAlignment="Center" Margin="-200,0,0,-270" VerticalAlignment="Center" Width="80" Height="80" FontFamily="Segoe UI Black" FontSize="24" Click="btnBack_Click"/>
         <Button Content="0" HorizontalAlignment="Center" Margin="0,0,0,-270" VerticalAlignment="Center" Width="80" Height="80" FontFamily="Segoe UI Black" FontSize="24" Click="btn0_Click"/>
-        <Button Content="OK" HorizontalAlignment="Center" Margin="0,0,-200,-270" VerticalAlignment="Center" Width="80" Height="80" FontFamily="Segoe UI Black" FontSize="24" Click="btnLogin_Click"/>
+        <Button x:Name="btnLogin" Content="OK" HorizontalAlignment="Center" Margin="0,0,-200,-270" VerticalAlignment="Center" Width="80" Height="80" FontFamily="Segoe UI Black" FontSize="24" Click="btnLogin_Click" IsEnabled="False"/>
     </Grid>
 </Page>

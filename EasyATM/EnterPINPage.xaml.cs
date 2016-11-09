@@ -153,5 +153,10 @@ namespace EasyATM
                 }
             }
         }
+
+        private void ButtonCancel_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new LoginPage());
+        }
     }
 }

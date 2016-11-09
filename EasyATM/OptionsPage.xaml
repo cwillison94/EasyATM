@@ -23,9 +23,7 @@
                             <Label Content="{Binding Type}"  />
                             <Button Click="ButtonViewAccount_Click" Tag="{Binding AccountNumber}" Content="View Details" Margin="20,0,0,0" Width="220" Background="#FF096200" FontFamily="Segoe UI Black" Foreground="White" BorderBrush="#FFD6D6D6" HorizontalAlignment="Right" VerticalAlignment="Center" DockPanel.Dock="Right">
                             </Button>
-                            <Label Content="{Binding AccountNumber}" />
-                            <Label HorizontalContentAlignment="Right" Content="{Binding BalanceFormatted}" DockPanel.Dock="Right" />
-
+                            <Label HorizontalContentAlignment="Right"  Content="{Binding AccountNumber}" DockPanel.Dock="Right"/>
 
                         </DockPanel>
                     </Border>

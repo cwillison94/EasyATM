@@ -13,6 +13,20 @@ namespace EasyATM.Models
         Demo_Saving
     }
 
+    public enum TransactionType
+    {
+        Widthdraw, 
+        Deposit
+    }
+
+    public class TransactionItem
+    {
+        public DateTime Date { get; set; }
+        public TransactionType Type { get; set; }
+        public string Description { get; set; }
+        public float Amount { get; set; }
+    }
+
     public class EasyBankAccount
     {
         public int AccountNumber { private set; get; }
@@ -26,6 +40,8 @@ namespace EasyATM.Models
         }
         public string Type { private set; get; }
         public Client Client { private set; get; }
+
+        private List<TransactionItem> transactionHistory = new List<TransactionItem>();
 
         public EasyBankAccount(Client client, DemoAccountType demoAccountType) 
         {
@@ -46,6 +62,11 @@ namespace EasyATM.Models
             }
         }
 
+        public List<TransactionItem> ListTransactionHistory()
+        {
+            return this.transactionHistory;
+        }
+
         public EasyBankAccount(Client client)
         {
             this.Client = client;
@@ -53,8 +74,10 @@ namespace EasyATM.Models
 
         public bool Withdraw(float amount) 
         {
-            //TODO: implement balance checking
-            this.Balance -= amount;
+            if (amount > this.Balance)
+                return false;
+            else
+                this.Balance -= amount;
             return true;
         }
 

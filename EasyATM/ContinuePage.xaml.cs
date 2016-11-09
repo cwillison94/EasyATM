@@ -22,10 +22,12 @@ namespace EasyATM
     public partial class ContinuePage : Page
     {
         private OptionsPage session;
+        private bool withdrawRequired;
 
-        public ContinuePage(OptionsPage session, bool success, string yesHint = "", string noHint = "")
+        public ContinuePage(OptionsPage session, bool success, bool withdrawRequired = false, string yesHint = "", string noHint = "")
         {
             InitializeComponent();
+            this.withdrawRequired = withdrawRequired;
             this.YesActionHint.Text = yesHint;
             this.NoActionHint.Text = noHint;
             this.session = session;
@@ -43,7 +45,14 @@ namespace EasyATM
 
         private void ButtonComplete_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new LoginPage());
+            if (withdrawRequired)
+            {
+                this.NavigationService.Navigate(new DispensingCash());
+            }
+            else
+            {
+                this.NavigationService.Navigate(new LoginPage()); 
+            }
         }
 
         private void ButtonAnotherTransaction_Click(object sender, RoutedEventArgs e)

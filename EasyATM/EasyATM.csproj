@@ -62,14 +62,14 @@
     <Compile Include="ContinuePage.xaml.cs">
       <DependentUpon>ContinuePage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="DenominationControl.xaml.cs">
-      <DependentUpon>DenominationControl.xaml</DependentUpon>
-    </Compile>
     <Compile Include="DepositOptions.xaml.cs">
       <DependentUpon>DepositOptions.xaml</DependentUpon>
     </Compile>
     <Compile Include="DepositPage.xaml.cs">
       <DependentUpon>DepositPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DispensingCash.xaml.cs">
+      <DependentUpon>DispensingCash.xaml</DependentUpon>
     </Compile>
     <Compile Include="EnterPINPage.xaml.cs">
       <DependentUpon>EnterPINPage.xaml</DependentUpon>
@@ -104,10 +104,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="DenominationControl.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="DepositOptions.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -115,6 +111,10 @@
     <Page Include="DepositPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DispensingCash.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="EnterPINPage.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -206,6 +206,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\cash.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

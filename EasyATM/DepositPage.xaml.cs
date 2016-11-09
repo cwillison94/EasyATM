@@ -22,6 +22,8 @@ namespace EasyATM
     public partial class DepositPage : Page
     {
         int decimalLocation;
+        int decimalPostitions;
+        bool decimalState;
         OptionsPage session;
         int accountNumber;
 
@@ -31,62 +33,79 @@ namespace EasyATM
             this.accountNumber = accountNumber;
             InitializeComponent();
         }
+        private void updateDepositAmount(string i)
+        {
+          if(decimalState && decimalPostitions < 2)
+          {
+              decimalPostitions ++;
+              DepositAmount.Text = DepositAmount.Text + i;
+          }
+          else if (!decimalState && DepositAmount.Text.Length < 7)
+          {
+              DepositAmount.Text = DepositAmount.Text + i;
+          }
+        }
 
         private void btn0_Click(object sender, RoutedEventArgs e)
         {
-            if (DepositAmount.Text.Length < 7) DepositAmount.Text = DepositAmount.Text + "0";
+            updateDepositAmount("0");
         }
 
         private void btn1_Click(object sender, RoutedEventArgs e)
         {
-            if (DepositAmount.Text.Length < 7) DepositAmount.Text = DepositAmount.Text + "1";
+            updateDepositAmount("1");
         }
 
         private void btn2_Click(object sender, RoutedEventArgs e)
         {
-            if (DepositAmount.Text.Length < 7) DepositAmount.Text = DepositAmount.Text + "2";
+            updateDepositAmount("2");
         }
 
         private void btn3_Click(object sender, RoutedEventArgs e)
         {
-            if (DepositAmount.Text.Length < 7) DepositAmount.Text = DepositAmount.Text + "3";
+            updateDepositAmount("3");
         }
 
         private void btn4_Click(object sender, RoutedEventArgs e)
         {
-            if (DepositAmount.Text.Length < 7) DepositAmount.Text = DepositAmount.Text + "4";
+            updateDepositAmount("4");
         }
 
         private void btn5_Click(object sender, RoutedEventArgs e)
         {
-            if (DepositAmount.Text.Length < 7) DepositAmount.Text = DepositAmount.Text + "5";
+            updateDepositAmount("5");
         }
 
         private void btn6_Click(object sender, RoutedEventArgs e)
         {
-            if (DepositAmount.Text.Length < 7) DepositAmount.Text = DepositAmount.Text + "6";
+            updateDepositAmount("6");
         }
 
         private void btn7_Click(object sender, RoutedEventArgs e)
         {
-            if (DepositAmount.Text.Length < 7) DepositAmount.Text = DepositAmount.Text + "7";
+            updateDepositAmount("7");
         }
 
         private void btn8_Click(object sender, RoutedEventArgs e)
         {
-            if (DepositAmount.Text.Length < 7) DepositAmount.Text = DepositAmount.Text + "8";
+            updateDepositAmount("8");
         }
 
         private void btn9_Click(object sender, RoutedEventArgs e)
         {
-            if (DepositAmount.Text.Length < 7) DepositAmount.Text = DepositAmount.Text + "9";
+            updateDepositAmount("9");
         }
 
         private void btnDecimal_Click(object sender, RoutedEventArgs e)
         {
-            if (DepositAmount.Text.Length < 7) DepositAmount.Text = DepositAmount.Text + ".";
-            btnDecimal.IsEnabled = false;
-            decimalLocation = DepositAmount.Text.Length - 1;
+
+            if (DepositAmount.Text.Length < 7)
+            {
+                DepositAmount.Text = DepositAmount.Text + ".";
+                btnDecimal.IsEnabled = false;
+                decimalState = true;
+                decimalLocation = DepositAmount.Text.Length - 1;
+            }
         }
 
         private void btnBack_Click(object sender, RoutedEventArgs e)

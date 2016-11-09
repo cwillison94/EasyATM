@@ -55,6 +55,8 @@ namespace EasyATM
         private void refreshTotalCount()
         {
             countTotal.Content = this.TotalValue.ToString("C");
+            if (this.TotalValue > 0) buttonAccept.IsEnabled = true;
+            else buttonAccept.IsEnabled = false;
         }
 
         private void ButtonBack_Click(object sender, RoutedEventArgs e)

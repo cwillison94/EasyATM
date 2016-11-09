@@ -29,7 +29,7 @@ namespace EasyATM
             this.session = session;
             if (success)
             {
-                this.label.Content = "Transaction Successful!";
+                this.label.Content = "Transaction Approved!";
                 this.label.Background = Brushes.DeepSkyBlue;
             }
             else
@@ -41,7 +41,7 @@ namespace EasyATM
 
         private void ButtonComplete_Click(object sender, RoutedEventArgs e)
         {
-
+            this.NavigationService.Navigate(new LoginPage());
         }
 
         private void ButtonAnotherTransaction_Click(object sender, RoutedEventArgs e)

@@ -19,9 +19,9 @@
         <Label Content="EasyBank Withdrawal" HorizontalAlignment="Left" Margin="34,30,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" FontSize="36"/>
         <Label x:Name="AccountMessageLabel" Content="This is the account" HorizontalContentAlignment="Right" Margin="0,49,17,0" VerticalAlignment="Top"  FontSize="20" FontFamily="Segoe UI Black"/>
 
-        <Label x:Name="countNotes5" Content="0" FontFamily="Segoe UI Black" FontSize="48" HorizontalAlignment="Left" Margin="290,107,-7,0" Height="68" Width="37" VerticalAlignment="Top"/>
+        <Label x:Name="countNotes5" Content="0" FontFamily="Segoe UI Black" FontSize="48" HorizontalAlignment="Center" Margin="-550,107,0,0" Height="68" Width="37" VerticalAlignment="Top"/>
 
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="156,172,0,0" VerticalAlignment="Top" Height="92" Width="312">
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="-550,172,0,0" VerticalAlignment="Top" Height="92" Width="312">
             <Button Click="decrement5_Click" HorizontalAlignment="Left" Height="75" Margin="0" VerticalAlignment="Top" Width="75" FontSize="24" BorderBrush="#00707070" Background="Transparent" Foreground="#FFFF0808" FontFamily="Segoe UI Black" FontWeight="Bold">
                 <Image Source="/Resources/minus.png" Height="75" Width="75" HorizontalAlignment="Left" VerticalAlignment="Top"></Image>
             </Button>
@@ -46,9 +46,9 @@
 
         <Label x:Name="countTotal" Content="0" HorizontalAlignment="Center" Height="82" Margin="0,0,0,91" VerticalAlignment="Bottom" Width="278" FontSize="48" HorizontalContentAlignment="Center" FontFamily="Segoe UI Black"/>
         <Label x:Name="label5" Content="Total" HorizontalAlignment="Center" Height="56" Margin="0,1,0,153" VerticalAlignment="Bottom" Width="101" FontSize="36" HorizontalContentAlignment="Center" FontFamily="Segoe UI Black"/>
-        <Label x:Name="countNotes10" Content="0" FontFamily="Segoe UI Black" FontSize="48" HorizontalAlignment="Right" Width="42" Margin="26,108,253,0" VerticalAlignment="Top" Height="68"/>
+        <Label x:Name="countNotes10" Content="0" FontFamily="Segoe UI Black" FontSize="48" HorizontalAlignment="Center" Width="42" Margin="0,108,-550,0" VerticalAlignment="Top" Height="68"/>
 
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,172,117,0" VerticalAlignment="Top" Height="92" Width="309">
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,172,-550,0" VerticalAlignment="Top" Height="92" Width="309">
             <Button Click="decrement10_Click" HorizontalAlignment="Right" Height="75" Margin="0" VerticalAlignment="Top" Width="75" FontSize="24" BorderBrush="#00707070" Background="Transparent" Foreground="#FFFF0808" FontFamily="Segoe UI Black" FontWeight="Bold">
                 <Image Source="Resources/minus.png" Height="75" Width="75" VerticalAlignment="Top" HorizontalAlignment="Right"/>
             </Button>
@@ -63,9 +63,9 @@
 
         </StackPanel>
 
-        <Label x:Name="countNotes20" Content="0" FontFamily="Segoe UI Black" FontSize="48" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="290,308,0,0" Height="68" Width="38"/>
+        <Label x:Name="countNotes20" Content="0" FontFamily="Segoe UI Black" FontSize="48" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,308,550,0" Height="68" Width="38"/>
 
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="154,372,1,0" VerticalAlignment="Top" Height="92" Width="312">
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,372,550,0" VerticalAlignment="Top" Height="92" Width="312">
             <Button Click="decrement20_Click" HorizontalAlignment="Left" Height="75" Margin="0" VerticalAlignment="Top" Width="75" FontSize="24" BorderBrush="#00707070" Background="Transparent" Foreground="#FFFF0808" FontFamily="Segoe UI Black" FontWeight="Bold">
                 <Image Source="Resources/minus.png" Height="75" Width="75" HorizontalAlignment="Left" VerticalAlignment="Top"/>
             </Button>
@@ -79,9 +79,9 @@
             </Button>
         </StackPanel>
 
-        <Label x:Name="countNotes50" Content="0" FontFamily="Segoe UI Black" FontSize="48" HorizontalAlignment="Right" Width="38" Height="68" VerticalAlignment="Top" Margin="0,308,258,0"/>
+        <Label x:Name="countNotes50" Content="0" FontFamily="Segoe UI Black" FontSize="48" HorizontalAlignment="Center" Width="38" Height="68" VerticalAlignment="Top" Margin="550,308,0,0"/>
 
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="4,372,107,0" VerticalAlignment="Top" Height="92" Width="318">
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="550,372,0,0" VerticalAlignment="Top" Height="92" Width="318">
             <Button Click="decrement50_Click" HorizontalAlignment="Left" Height="75" Margin="0" VerticalAlignment="Top" Width="75" FontSize="24" BorderBrush="#00707070" Background="Transparent" Foreground="#FFFF0808" FontFamily="Segoe UI Black" FontWeight="Bold">
                 <Image Source="Resources/minus.png" Height="75" Width="75" HorizontalAlignment="Right" VerticalAlignment="Top"/>
             </Button>

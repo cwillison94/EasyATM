@@ -59,11 +59,15 @@
     <Compile Include="AccountSelect.xaml.cs">
       <DependentUpon>AccountSelect.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ContinuePage.xaml.cs">
+      <DependentUpon>ContinuePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DenominationControl.xaml.cs">
       <DependentUpon>DenominationControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\Client.cs" />
     <Compile Include="Models\DenominationModifier.cs" />
+    <Compile Include="Models\DisableNavigation.cs" />
     <Compile Include="Service\ClientAccessManager.cs" />
     <Compile Include="Withdrawal.xaml.cs">
       <DependentUpon>Withdrawal.xaml</DependentUpon>
@@ -73,6 +77,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="AccountSelect.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ContinuePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

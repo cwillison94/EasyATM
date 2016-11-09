@@ -16,8 +16,8 @@
                 <GradientStop Color="#FF23A016" Offset="0.04"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <Label x:Name="label" Content="Accept Cash Withdrawal of:" HorizontalAlignment="Left" Height="101" Margin="0,162,0,0" VerticalAlignment="Top" Width="1100" HorizontalContentAlignment="Center" FontSize="36"/>
-        <Label x:Name="label_WithdrawConfirmAmount" Content="" HorizontalAlignment="Left" Height="101" Margin="0,263,0,0" VerticalAlignment="Top" Width="1100" HorizontalContentAlignment="Center" FontSize="36"/>
+        <Label x:Name="label" Content="Accept Cash Withdrawal of:" HorizontalAlignment="Center" Height="101" Margin="0,162,0,0" VerticalAlignment="Top" Width="1100" HorizontalContentAlignment="Center" FontSize="36"/>
+        <Label x:Name="label_WithdrawConfirmAmount" Content="" HorizontalAlignment="Center" Height="101" Margin="0,263,0,0" VerticalAlignment="Top" Width="1100" HorizontalContentAlignment="Center" FontSize="36"/>
         <Button x:Name="button" Content="Yes" HorizontalAlignment="Right" Height="119" Margin="0,0,50,50" VerticalAlignment="Bottom" Width="312" Background="#FF3394D6" IsDefault="True" FontSize="36" Click="button_Click"/>
         <Button x:Name="button_Copy" Content="No" HorizontalAlignment="Left" Height="119" Margin="50,0,0,50" VerticalAlignment="Bottom" Width="312" Background="#FFBF1908" FontSize="36" Click="button_Copy_Click"/>
 

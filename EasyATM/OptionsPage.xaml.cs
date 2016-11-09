@@ -21,8 +21,8 @@ namespace EasyATM
     /// </summary>
     public partial class OptionsPage : Page
     {
-        private Client client; 
-            
+        public Client client; 
+
         public OptionsPage(Client client)
         {
             this.client = client;
@@ -49,7 +49,7 @@ namespace EasyATM
         private void ButtonWithdrawal_Click(object sender, RoutedEventArgs e)
         {
             // TODO: select account page for withdrawal
-            this.NavigationService.Navigate(new AccountSelect(this.client, AccountSelectType.Withdrawal));
+            this.NavigationService.Navigate(new AccountSelect(this, AccountSelectType.Withdrawal));
         }
     }
 }

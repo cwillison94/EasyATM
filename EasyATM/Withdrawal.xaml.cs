@@ -29,7 +29,7 @@ namespace EasyATM
             }
         }
 
-        private Client client = null;
+        public OptionsPage session;
         private EasyBankAccount account = null;
         private int count_5;
         private int count_10;
@@ -37,13 +37,13 @@ namespace EasyATM
         private int count_50;
         private int count_100;
 
-        public Withdrawal(Client client, int accountNumber)
+        public Withdrawal(OptionsPage session, int accountNumber)
         {
             InitializeComponent();
 
-            this.client = client;
-            this.account = client.GetAccount(accountNumber);
-            this.AccountMessageLabel.Content = this.client.FullName + " : " + this.account.ToString();
+            this.session = session;
+            this.account = this.session.client.GetAccount(accountNumber);
+            this.AccountMessageLabel.Content = this.session.client.FullName + " : " + this.account.ToString();
 
             count_5 = 0;
             count_10 = 0;
@@ -59,7 +59,7 @@ namespace EasyATM
 
         private void ButtonBack_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new OptionsPage(this.client));
+            this.NavigationService.Navigate(session);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -125,9 +125,8 @@ namespace EasyATM
 
         private void buttonAccept_Click(object sender, RoutedEventArgs e)
         {
-            this.account.Withdraw(this.TotalValue);
+            this.NavigationService.Navigate(new WithdrawalConfirmation(session, this.account, this.TotalValue));
             resetCounts();
-            this.NavigationService.Navigate(new OptionsPage(this.client));
             // TODO: Implenent continue page
             //this.NavigationService.Navigate(new ContinuePage(this.client));
         }

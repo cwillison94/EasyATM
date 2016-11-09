@@ -75,6 +75,9 @@
     <Compile Include="Withdrawal.xaml.cs">
       <DependentUpon>Withdrawal.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WithdrawalConfirmation.xaml.cs">
+      <DependentUpon>WithdrawalConfirmation.xaml</DependentUpon>
+    </Compile>
     <Page Include="Account.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -121,6 +124,10 @@
     <Page Include="Withdrawal.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WithdrawalConfirmation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <ItemGroup>

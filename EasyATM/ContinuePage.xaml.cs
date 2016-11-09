@@ -21,12 +21,22 @@ namespace EasyATM
     /// </summary>
     public partial class ContinuePage : Page
     {
-        private Client client = null;
+        private OptionsPage session;
 
-        public ContinuePage(Client client)
+        public ContinuePage(OptionsPage session, bool success)
         {
             InitializeComponent();
-            this.client = client;
+            this.session = session;
+            if (success)
+            {
+                this.label.Content = "Transaction Successful!";
+                this.label.Background = Brushes.DeepSkyBlue;
+            }
+            else
+            {
+                this.label.Content = "Insufficient Funds, Sorry.";
+                this.label.Background = Brushes.Red;
+            }
         }
 
         private void ButtonComplete_Click(object sender, RoutedEventArgs e)
@@ -36,7 +46,7 @@ namespace EasyATM
 
         private void ButtonAnotherTransaction_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new OptionsPage(this.client));
+            this.NavigationService.Navigate(session);
         }
     }
 }

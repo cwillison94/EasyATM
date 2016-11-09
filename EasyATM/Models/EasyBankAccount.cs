@@ -44,9 +44,11 @@ namespace EasyATM.Models
             this.Client = client;
         }
 
-        public void Withdraw(int amount) 
+        public bool Withdraw(int amount) 
         {
+            //TODO: implement balance checking
             this.Balance -= amount;
+            return true;
         }
 
         public override string ToString()

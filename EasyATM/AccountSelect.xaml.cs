@@ -29,15 +29,17 @@ namespace EasyATM
         private const string WITHDRAWAL_LABEL = "Please Select an Account to Withdraw From:";
         private const string DEPOSIT_LABEL = "Please Select an Account to Deposit To:";
 
+        OptionsPage session;
         private Client client = null;
         private AccountSelectType type;
 
-        public AccountSelect(Client client, AccountSelectType type)
+        public AccountSelect(OptionsPage session, AccountSelectType type)
         {
             InitializeComponent();
 
+            this.session = session;
             this.type = type;
-            this.client = client;
+            this.client = session.client;
             this.AccountSelectItemControl.ItemsSource = this.client.ListAccounts();
             SetAccountSelectMessage();
         }
@@ -63,7 +65,7 @@ namespace EasyATM
             switch (this.type)
             {
                 case AccountSelectType.Withdrawal:
-                    this.NavigationService.Navigate(new Withdrawal(this.client, accountNumber));
+                    this.NavigationService.Navigate(new Withdrawal(session, accountNumber));
                     break;
                 case AccountSelectType.Deposit:
                     //TODO: implement me
@@ -75,7 +77,7 @@ namespace EasyATM
 
         private void ButtonBack_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new OptionsPage(this.client));
+            this.NavigationService.Navigate(this.session);
         }
     }
 

@@ -26,13 +26,13 @@
         <Label x:Name="SelectFromAccountLabel" Content="Test Account - 12030343" HorizontalAlignment="Center" Margin="-709,189,0,0" VerticalAlignment="Top" FontFamily="Segoe UI" FontSize="20" Height="38" BorderThickness="0,0,0,2" BorderBrush="Black"/>
 
         <Label Content="$" HorizontalAlignment="Center" Margin="429,166,649,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" FontSize="20" Height="38"/>
-        <TextBox x:Name="TransferAmountTextBox" PreviewTextInput="AccountNumberValidationTextBox" TextAlignment="Center" Margin="452,167,452,543" TextWrapping="Wrap" ToolTip="Enter Account Number" FontSize="24" Width="196" Height="40" HorizontalAlignment="Center"/>
+        <TextBox x:Name="TransferAmountTextBox" TextAlignment="Center" Margin="452,167,452,543" TextWrapping="Wrap" ToolTip="Enter Account Number" FontSize="24" Width="196" Height="40" HorizontalAlignment="Center"/>
         <Label Content="To:&#xD;&#xA;" HorizontalAlignment="Center" Margin="660,109,0,-70" VerticalAlignment="Top" FontFamily="Segoe UI Black" FontSize="20" Height="38"/>
 
         <Label Content="Selected Account:&#xD;&#xA;" HorizontalAlignment="Center" Margin="484,163,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" FontSize="20" Height="38"/>
         <Label x:Name="SelectToAccountLabel" Content="Test Account - 12030343" HorizontalAlignment="Center" Margin="639,189,0,0" VerticalAlignment="Top" FontFamily="Segoe UI" FontSize="20" Height="38" BorderThickness="0,0,0,2" BorderBrush="Black"/>
 
-        <Button Content="1" HorizontalAlignment="Center" Margin="403,226,617,444" VerticalAlignment="Center" Width="80" Height="80" FontFamily="Segoe UI Black" FontSize="24" Click="btn1_Click"/>
+        <!--<Button Content="1" HorizontalAlignment="Center" Margin="403,226,617,444" VerticalAlignment="Center" Width="80" Height="80" FontFamily="Segoe UI Black" FontSize="24" Click="btn1_Click"/>
         <Button Content="2" HorizontalAlignment="Center" Margin="503,226,517,444" VerticalAlignment="Center" Width="80" Height="80" FontFamily="Segoe UI Black" FontSize="24" Click="btn2_Click"/>
         <Button Content="3" HorizontalAlignment="Center" Margin="603,226,417,444" VerticalAlignment="Center" Width="80" Height="80" FontFamily="Segoe UI Black" FontSize="24" Click="btn3_Click"/>
         <Button Content="4" HorizontalAlignment="Center" Margin="403,316,617,354" VerticalAlignment="Center" Width="80" Height="80" FontFamily="Segoe UI Black" FontSize="24" Click="btn4_Click"/>
@@ -43,6 +43,6 @@
         <Button Content="9" HorizontalAlignment="Center" Margin="603,406,417,264" VerticalAlignment="Center" Width="80" Height="80" FontFamily="Segoe UI Black" FontSize="24" Click="btn9_Click"/>
         <Button Content="Back" HorizontalAlignment="Center" Margin="403,496,617,174" VerticalAlignment="Center" Width="80" Height="80" FontFamily="Segoe UI Black" FontSize="24" Click="btnBack_Click"/>
         <Button Content="0" HorizontalAlignment="Center" Margin="503,496,517,174" VerticalAlignment="Center" Width="80" Height="80" FontFamily="Segoe UI Black" FontSize="24" Click="btn0_Click"/>
-        <Button Content="OK" HorizontalAlignment="Center" Margin="603,496,417,174" VerticalAlignment="Center" Width="80" Height="80" FontFamily="Segoe UI Black" FontSize="24" Click="btnLogin_Click"/>
+        <Button Content="OK" HorizontalAlignment="Center" Margin="603,496,417,174" VerticalAlignment="Center" Width="80" Height="80" FontFamily="Segoe UI Black" FontSize="24" Click="btnLogin_Click"/>-->
     </Grid>
 </Page>

@@ -44,7 +44,7 @@ namespace EasyATM
             Regex regex = new Regex("[^0-9]+");
             e.Handled = regex.IsMatch(e.Text);
         }
-       
+
         private void btn0_Click(object sender, RoutedEventArgs e)
         {
             updateAccountNumber("0");
@@ -101,7 +101,7 @@ namespace EasyATM
             if (accountNumber.Length != 0)
             {
                 AccountNumber.Text = accountNumber.Substring(0, accountNumber.Length - 1);
-                AccountNumber.Text = AccountNumber.Text.Insert(0,"-");
+                AccountNumber.Text = AccountNumber.Text.Insert(0, "-");
             }
             btnLogin.IsEnabled = false;
         }
@@ -109,12 +109,12 @@ namespace EasyATM
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
             int accountNumber;
-            
+
             if (int.TryParse(AccountNumber.Text, out accountNumber))
             {
                 NavigationService.Navigate(new EnterPINPage(accountNumber));
             }
-            else 
+            else
             {
                 // TODO: Handle parsing error - shouldn't happen
             }
@@ -124,7 +124,10 @@ namespace EasyATM
         {
 
         }
+
+        private void btnSwipeCard_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new EnterPINPage(123456));
+        }
     }
-
-
 }

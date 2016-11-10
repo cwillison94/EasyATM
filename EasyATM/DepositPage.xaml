@@ -15,21 +15,30 @@
                 <GradientStop Color="#FFB2F1AF" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <Label x:Name="label" Content="Please enusre all items to be deposited are secured in&#xA;one of the envelopes provided. Insert envelope in slot." HorizontalAlignment="Center" Height="100" Margin="192,32,188,618" VerticalAlignment="Center" Width="720" IsEnabled="False" FontSize="24" Foreground="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold"/>
-        <TextBox x:Name="DepositAmount" TextAlignment="Center" Margin="274,185,326,525" TextWrapping="Wrap" ToolTip="Enter Account Number" FontSize="24" Width="500" Height="40" HorizontalAlignment="Center"/>
-        <Label Content="Please enter amount to be deposited" Margin="0,141,0,570" FontSize="22" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-        <Button Content="1" HorizontalAlignment="Center" Margin="380,245,640,425" VerticalAlignment="Center" Width="80" Height="80" FontFamily="Segoe UI Black" FontSize="24" Click="btn1_Click"/>
-        <Button Content="2" HorizontalAlignment="Center" Margin="480,245,540,425" VerticalAlignment="Center" Width="80" Height="80" FontFamily="Segoe UI Black" FontSize="24" Click="btn2_Click"/>
-        <Button Content="3" HorizontalAlignment="Center" Margin="580,245,440,425" VerticalAlignment="Center" Width="80" Height="80" FontFamily="Segoe UI Black" FontSize="24" Click="btn3_Click"/>
-        <Button Content="4" HorizontalAlignment="Center" Margin="380,335,640,335" VerticalAlignment="Center" Width="80" Height="80" FontFamily="Segoe UI Black" FontSize="24" Click="btn4_Click"/>
-        <Button Content="5" HorizontalAlignment="Center" Margin="480,335,540,335" VerticalAlignment="Center" Width="80" Height="80" FontFamily="Segoe UI Black" FontSize="24" Click="btn5_Click"/>
-        <Button Content="6" HorizontalAlignment="Center" Margin="580,335,440,335" VerticalAlignment="Center" Width="80" Height="80" FontFamily="Segoe UI Black" FontSize="24" Click="btn6_Click"/>
-        <Button Content="7" HorizontalAlignment="Center" Margin="380,425,640,245" VerticalAlignment="Center" Width="80" Height="80" FontFamily="Segoe UI Black" FontSize="24" Click="btn7_Click"/>
-        <Button Content="8" HorizontalAlignment="Center" Margin="480,425,540,245" VerticalAlignment="Center" Width="80" Height="80" FontFamily="Segoe UI Black" FontSize="24" Click="btn8_Click"/>
-        <Button Content="9" HorizontalAlignment="Center" Margin="580,425,440,245" VerticalAlignment="Center" Width="80" Height="80" FontFamily="Segoe UI Black" FontSize="24" Click="btn9_Click"/>
-        <Button x:Name="btnDecimal" Content="." HorizontalAlignment="Center" Margin="580,515,440,155" VerticalAlignment="Center" Width="80" Height="80" FontFamily="Segoe UI Black" FontSize="24" Click="btnDecimal_Click"/>
-        <Button Content="0" HorizontalAlignment="Center" Margin="480,515,540,155" VerticalAlignment="Center" Width="80" Height="80" FontFamily="Segoe UI Black" FontSize="24" Click="btn0_Click"/>
-        <Button Content="DEL" HorizontalAlignment="Center" Margin="-261,359,0,0" VerticalAlignment="Center" Width="80" Height="80" FontFamily="Segoe UI Black" FontSize="24" Click="btnBack_Click" HorizontalContentAlignment="Center" Padding="1,0,1,-7"/>
-        <Button x:Name="buttonAccept" Content="Accept" HorizontalAlignment="Center" Height="108" Margin="828,543,72,99" VerticalAlignment="Center" Width="200" Background="#FF0099D3" FontSize="36" Click="buttonAccept_Click"/>
+        <Label x:Name="label" Content="Please enusre all items to be deposited are secured in&#xA;one of the envelopes provided. Insert envelope in slot." HorizontalAlignment="Center" Height="100" Margin="0,0,0,580" VerticalAlignment="Center" Width="720" IsEnabled="False" FontSize="24" Foreground="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold"/>
+        <TextBox x:Name="DepositAmount" TextAlignment="Center" Margin="0,0,0,350" TextWrapping="Wrap" ToolTip="Enter Account Number" FontSize="24" Width="500" Height="40" HorizontalAlignment="Center"/>
+        <Label Content="Please enter amount to be deposited" Margin="0,0,0,450" FontSize="22" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <Button Content="1" HorizontalAlignment="Center" Margin="0,0,200,180" VerticalAlignment="Center" Width="80" Height="80" FontFamily="Segoe UI Black" FontSize="24" Click="btn1_Click"/>
+        <Button Content="2" HorizontalAlignment="Center" Margin="0,0,0,180" VerticalAlignment="Center" Width="80" Height="80" FontFamily="Segoe UI Black" FontSize="24" Click="btn2_Click"/>
+        <Button Content="3" HorizontalAlignment="Center" Margin="200,0,0,180" VerticalAlignment="Center" Width="80" Height="80" FontFamily="Segoe UI Black" FontSize="24" Click="btn3_Click"/>
+        <Button Content="4" HorizontalAlignment="Center" Margin="0,0,200,0" VerticalAlignment="Center" Width="80" Height="80" FontFamily="Segoe UI Black" FontSize="24" Click="btn4_Click"/>
+        <Button Content="5" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" Width="80" Height="80" FontFamily="Segoe UI Black" FontSize="24" Click="btn5_Click"/>
+        <Button Content="6" HorizontalAlignment="Center" Margin="200,0,0,0" VerticalAlignment="Center" Width="80" Height="80" FontFamily="Segoe UI Black" FontSize="24" Click="btn6_Click"/>
+        <Button Content="7" HorizontalAlignment="Center" Margin="0,180,200,0" VerticalAlignment="Center" Width="80" Height="80" FontFamily="Segoe UI Black" FontSize="24" Click="btn7_Click"/>
+        <Button Content="8" HorizontalAlignment="Center" Margin="0,180,0,0" VerticalAlignment="Center" Width="80" Height="80" FontFamily="Segoe UI Black" FontSize="24" Click="btn8_Click"/>
+        <Button Content="9" HorizontalAlignment="Center" Margin="200,180,0,0" VerticalAlignment="Center" Width="80" Height="80" FontFamily="Segoe UI Black" FontSize="24" Click="btn9_Click"/>
+        <Button x:Name="btnDecimal" Content="." HorizontalAlignment="Center" Margin="200,360,0,0" VerticalAlignment="Center" Width="80" Height="80" FontFamily="Segoe UI Black" FontSize="24" Click="btnDecimal_Click"/>
+        <Button Content="0" HorizontalAlignment="Center" Margin="0,360,0,0" VerticalAlignment="Center" Width="80" Height="80" FontFamily="Segoe UI Black" FontSize="24" Click="btn0_Click"/>
+        <Button Content="DEL" HorizontalAlignment="Center" Margin="0,360,200,0" VerticalAlignment="Center" Width="80" Height="80" FontFamily="Segoe UI Black" FontSize="24" Click="btnBack_Click" HorizontalContentAlignment="Center" Padding="1,0,1,-7"/>
+        <Button x:Name="buttonAccept" Content="Accept" HorizontalAlignment="Center" Height="108" Margin="800,550,0,0" VerticalAlignment="Center" Width="200" Background="#FF0099D3" FontSize="36" Click="buttonAccept_Click">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="buttonCancel" Content="Cancel" HorizontalAlignment="Center" Height="108" Margin="60,596,840,46" VerticalAlignment="Center" Width="200" Background="#FFF32C0C" FontSize="36" Click="buttonCancel_Click">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
     </Grid>
 </Page>

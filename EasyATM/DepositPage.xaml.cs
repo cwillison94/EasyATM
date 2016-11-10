@@ -132,5 +132,10 @@ namespace EasyATM
             }
             NavigationService.Navigate(new ContinuePage(session, true));
         }
+
+        private void buttonCancel_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(session);
+        }
     }
 }

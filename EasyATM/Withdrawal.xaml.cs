@@ -37,11 +37,14 @@ namespace EasyATM
         private int count_50;
         private int count_100;
 
-        public Withdrawal(OptionsPage session, int accountNumber)
+        private Page previousPage;
+
+        public Withdrawal(OptionsPage session, Page previousPage, int accountNumber)
         {
             InitializeComponent();
 
             this.session = session;
+            this.previousPage = previousPage;
             this.account = this.session.client.GetAccount(accountNumber);
             this.AccountMessageLabel.Content = this.session.client.FullName + " : " + this.account.ToString();
 
@@ -61,7 +64,7 @@ namespace EasyATM
 
         private void ButtonBack_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(this.session);
+            this.NavigationService.Navigate(this.previousPage);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

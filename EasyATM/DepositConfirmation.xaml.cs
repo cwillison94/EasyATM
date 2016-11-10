@@ -28,10 +28,11 @@ namespace EasyATM
 
         public DepositConfirmation(OptionsPage session, float amount, int accountNumber)
         {
+            InitializeComponent();
             this.session = session;
             this.amount = amount;
             this.accountNumber = accountNumber;
-            InitializeComponent();
+            this.labelAmount.Content = "$" + amount.ToString() + " CAD";
         }
 
         private void btnInsertEnv_Click(object sender, RoutedEventArgs e)

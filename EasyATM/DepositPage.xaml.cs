@@ -127,10 +127,8 @@ namespace EasyATM
 
             if (float.TryParse(DepositAmount.Text, out depositAmount))
             {
-                EasyBankAccount account = session.client.GetAccount(accountNumber);
-                account.Deposit(depositAmount);
-            }
-            NavigationService.Navigate(new ContinuePage(session, true));
+                NavigationService.Navigate(new DepositConfirmation(session, depositAmount, accountNumber));
+            }          
         }
 
         private void buttonCancel_Click(object sender, RoutedEventArgs e)

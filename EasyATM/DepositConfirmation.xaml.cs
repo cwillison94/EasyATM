@@ -12,35 +12,36 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using EasyATM.Models;
+using EasyATM.Service;
 
 namespace EasyATM
 {
     /// <summary>
-    /// Interaction logic for DepositOptions.xaml
+    /// Interaction logic for DepositConfirmation.xaml
     /// </summary>
-    public partial class DepositOptions : Page
+    public partial class DepositConfirmation : Page
     {
+        float amount;
         OptionsPage session;
         int accountNumber;
 
-        public DepositOptions(OptionsPage session, int accountNumber)
+        public DepositConfirmation(OptionsPage session, float amount, int accountNumber)
         {
             this.session = session;
+            this.amount = amount;
             this.accountNumber = accountNumber;
             InitializeComponent();
         }
 
-        private void btnCash_Click(object sender, RoutedEventArgs e)
+        private void btnInsertEnv_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new DepositPage(session, accountNumber));
+            EasyBankAccount account = session.client.GetAccount(accountNumber);
+            account.Deposit(amount);
+            NavigationService.Navigate(new ContinuePage(session, true, false, "Return to Main Page", "Logout"));
         }
 
-        private void btnCheque_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationService.Navigate(new DepositPage(session, accountNumber));
-        }
-
-        private void ButtonBack_Click(object sender, RoutedEventArgs e)
+        private void buttonCancel_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(session);
         }

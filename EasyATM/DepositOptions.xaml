@@ -15,7 +15,24 @@
                 <GradientStop Color="#FFB2F1AF" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <Button x:Name="btnCash" Content="Deposit Cash" HorizontalAlignment="Center" Height="121" Margin="0,0,500,200" VerticalAlignment="Center" Width="242" FontSize="30" Background="#FF0086C5" Click="btnCash_Click"/>
-        <Button x:Name="btnCheque" Content="Deposit Cheque" HorizontalAlignment="Center" Height="121" Margin="498,0,0,200" VerticalAlignment="Center" Width="242" FontSize="30" Background="#FFBFD300" Click="btnCheque_Click"/>
+        <Button x:Name="btnCash" Content="Deposit Cash" HorizontalAlignment="Center" Height="121" Margin="0,0,500,200" VerticalAlignment="Center" Width="242" FontSize="30" Background="#FF0086C5" Click="btnCash_Click">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="btnCheque" Content="Deposit Cheque" HorizontalAlignment="Center" Height="121" Margin="498,0,0,200" VerticalAlignment="Center" Width="242" FontSize="30" Background="#FFBFD300" Click="btnCheque_Click">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Label x:Name="label" Content="Please Select Which Type of Deposit You Would Like to Make" HorizontalAlignment="Center" Height="80" Margin="0,0,0,500" VerticalAlignment="Center" Width="741" FontSize="24" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold"/>
+        <Button Margin="10,0,0,12" Background="#FFE8FF00" Click="ButtonBack_Click" Width="200" Height="70" VerticalAlignment="Bottom" HorizontalAlignment="Left">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+            <StackPanel HorizontalAlignment="Center">
+                <Image Source="Resources/back.png" Height="66" Width="94" VerticalAlignment="Bottom" />
+            </StackPanel>
+        </Button>
     </Grid>
 </Page>

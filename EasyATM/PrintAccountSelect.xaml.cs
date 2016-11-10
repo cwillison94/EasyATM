@@ -22,21 +22,32 @@ namespace EasyATM
     {
         OptionsPage session;
         List<int> selectedAccounts;
+        int checkCount;
         public PrintAccountSelect(OptionsPage session)
         {
             InitializeComponent();
             this.session = session;
             this.AccountSelectItemControl.ItemsSource = session.client.ListAccounts();
+            this.checkCount = 0;
         }
 
         private void CheckBoxSelectAccount_Checked(object sender, RoutedEventArgs e)
         {
-            
+            checkCount++;
+            if (checkCount > 0) btnPrint.IsEnabled = true;
+            else btnPrint.IsEnabled = false;
+        }
+
+        private void CheckBox_Unchecked(object sender, RoutedEventArgs e)
+        {
+            checkCount--;
+            if (checkCount > 0) btnPrint.IsEnabled = true;
+            else btnPrint.IsEnabled = false;
         }
 
         private void btnPrint_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new PrintAccounts(this.session, selectedAccounts));
+            NavigationService.Navigate(new PrintAccounts(this.session));
         }
     }
 }

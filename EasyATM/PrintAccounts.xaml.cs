@@ -21,9 +21,8 @@ namespace EasyATM
     public partial class PrintAccounts : Page
     {
         OptionsPage session;
-        List<int> accountList;
 
-        public PrintAccounts(OptionsPage session, List<int> accountList)
+        public PrintAccounts(OptionsPage session)
         {
             InitializeComponent();
             this.session = session;
@@ -31,7 +30,7 @@ namespace EasyATM
 
         private void btnRemovePrint_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(session);
+            NavigationService.Navigate(new ContinuePage(session, true));
         }
     }
 }

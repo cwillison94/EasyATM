@@ -72,7 +72,7 @@
             </Button.Effect>
         </Button>
 
-        <Button Content="Print" Margin="0,490,96,0" Width="220" Height="70" HorizontalAlignment="Right" FontFamily="Segoe UI Black" FontSize="22" RenderTransformOrigin="0.368,-0.155" VerticalAlignment="Top">
+        <Button x:Name="ButtonPrint" Content="Print" Margin="0,490,96,0" Width="220" Height="70" HorizontalAlignment="Right" FontFamily="Segoe UI Black" FontSize="22" RenderTransformOrigin="0.368,-0.155" VerticalAlignment="Top" Click="ButtonPrint_Click">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>

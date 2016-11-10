@@ -15,9 +15,8 @@
                 <GradientStop Color="#FFB2F1AF" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <Label x:Name="label" Content="Please enusre all items to be deposited are secured in&#xA;one of the envelopes provided. Insert envelope in slot." HorizontalAlignment="Center" Height="70" Margin="0,0,0,580" VerticalAlignment="Center" Width="720" IsEnabled="False" FontSize="24" Foreground="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold"/>
         <TextBox x:Name="DepositAmount" TextAlignment="Center" Margin="0,0,0,350" TextWrapping="Wrap" ToolTip="Enter Account Number" FontSize="24" Width="500" Height="40" HorizontalAlignment="Center"/>
-        <Label Content="Please enter amount to be deposited" Margin="0,0,0,450" FontSize="22" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <Label Content="Please enter amount to be deposited" Margin="0,0,0,500" FontSize="36" VerticalAlignment="Center" HorizontalAlignment="Center" Height="100" Width="700" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold"/>
         <Button Content="1" HorizontalAlignment="Center" Margin="0,0,200,180" VerticalAlignment="Center" Width="80" Height="80" FontFamily="Segoe UI Black" FontSize="24" Click="btn1_Click"/>
         <Button Content="2" HorizontalAlignment="Center" Margin="0,0,0,180" VerticalAlignment="Center" Width="80" Height="80" FontFamily="Segoe UI Black" FontSize="24" Click="btn2_Click"/>
         <Button Content="3" HorizontalAlignment="Center" Margin="200,0,0,180" VerticalAlignment="Center" Width="80" Height="80" FontFamily="Segoe UI Black" FontSize="24" Click="btn3_Click"/>

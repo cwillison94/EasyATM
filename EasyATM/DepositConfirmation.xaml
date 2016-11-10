@@ -16,7 +16,7 @@
             </LinearGradientBrush>
         </Grid.Background>
         <Label x:Name="label" Content="To complete deposit of:" HorizontalAlignment="Center" Height="92" Margin="0,0,0,500" VerticalAlignment="Center" Width="494" FontSize="36" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold"/>
-        <Label x:Name="label_Copy" Content="$ 0 CAD" HorizontalAlignment="Center" Height="92" Margin="0,0,0,350" VerticalAlignment="Center" Width="494" FontSize="36" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Label x:Name="labelAmount" Content="$ 0 CAD" HorizontalAlignment="Center" Height="92" Margin="0,0,0,350" VerticalAlignment="Center" Width="494" FontSize="36" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
         <Label x:Name="label_Copy1" Content="Please put all items to be deposited in one of&#xD;&#xA;the provided envelopes and &#xD;&#xA;insert it into the machine." HorizontalAlignment="Center" Height="200" Margin="0,0,0,80" VerticalAlignment="Center" Width="800" FontSize="36" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
         <Button x:Name="btnSwipeCard" Content="Human Action:&#xA;Insert Envelope" HorizontalAlignment="Center" Height="165" Margin="0,0,0,10" VerticalAlignment="Bottom" Width="297" FontSize="24" FontWeight="Bold" Background="#FFE49BF9" Click="btnInsertEnv_Click">
             <Button.Effect>

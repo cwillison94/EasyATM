@@ -39,10 +39,19 @@
                 </DataTemplate>
             </ItemsControl.ItemTemplate>
         </ItemsControl>
-        <Button x:Name="btnPrint" Content="Print" HorizontalAlignment="Right" Height="122" Margin="0,0,50,50" VerticalAlignment="Bottom" Width="242" FontSize="30" Background="#FF0086C5" Click="btnPrint_Click" IsEnabled="False">
+        <Button x:Name="btnPrint" Content="Print" HorizontalAlignment="Right" Height="80" Margin="0,0,10,10" VerticalAlignment="Bottom" Width="200" FontSize="30" Background="#FF0086C5" Click="btnPrint_Click" IsEnabled="False" FontFamily="Segoe UI Black">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
+        </Button>
+
+        <Button Margin="10,0,0,10" Background="#FFE8FF00" Click="ButtonBack_Click" Width="200" Height="80" VerticalAlignment="Bottom" HorizontalAlignment="Left">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+            <StackPanel HorizontalAlignment="Center">
+                <Image Source="/Resources/back.png" Height="66" Width="94" VerticalAlignment="Bottom" />
+            </StackPanel>
         </Button>
     </Grid>
 </Page>

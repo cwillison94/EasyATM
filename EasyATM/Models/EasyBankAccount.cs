@@ -94,7 +94,7 @@ namespace EasyATM.Models
 
         public List<TransactionItem> ListTransactionHistory()
         {
-            return this.transactionHistory;
+            return this.transactionHistory.OrderByDescending(x => x.Date).ToList();
         }
 
         public EasyBankAccount(Client client)
@@ -109,9 +109,10 @@ namespace EasyATM.Models
             else
             {
                 this.Balance -= amount;
-                this.transactionHistory.Add(new TransactionItem() { Date = DateTime.Now, Description = "EasyBank ATM Withdraw", Amount = -amount, Type = TransactionType.Widthdraw });
+                var trannyItem = new TransactionItem() { Date = DateTime.Now, Description = "EasyBank ATM Withdraw", Amount = -amount, Type = TransactionType.Widthdraw };
+                this.transactionHistory.Add(trannyItem);
+                this.Client.AddPendingWithdrawal(trannyItem);
                 return true;
-                
             }
         }
 

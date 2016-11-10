@@ -52,13 +52,21 @@ namespace EasyATM
             }
             else
             {
-                this.NavigationService.Navigate(new LoginPage()); 
+                if (this.session.client.HasPendingWidthdrawls)
+                {
+                    this.NavigationService.Navigate(new DispensingCash());
+                }
+                else
+                {
+                    this.NavigationService.Navigate(new LoginPage()); 
+                }
             }
         }
 
         private void ButtonAnotherTransaction_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(session);
+            this.session.NavigateToMe(this.NavigationService);
+            //this.NavigationService.Navigate(session);
         }
     }
 }

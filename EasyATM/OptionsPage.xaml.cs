@@ -30,7 +30,31 @@ namespace EasyATM
             this.WelcomeMessage.Content = client.WelcomeMessage;
 
             this.AccountItemControl.ItemsSource = this.client.ListAccounts();
+            this.PendingListView.ItemsSource = this.client.ListPendingWithdrawals();
 
+            CheckPendingWithdrawalVisiblity();
+        }
+
+        public void NavigateToMe(NavigationService navService)
+        {
+            this.PendingListView.ItemsSource = this.client.ListPendingWithdrawals();
+            this.PendingListView.Items.Refresh();
+            CheckPendingWithdrawalVisiblity();
+            navService.Navigate(this);
+        }
+
+        private void CheckPendingWithdrawalVisiblity()
+        {
+            if (this.client.HasPendingWidthdrawls)
+            {
+                this.PendingListView.Visibility = Visibility.Visible;
+                this.PendingWithdrawalLabel.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                this.PendingListView.Visibility = Visibility.Collapsed;
+                this.PendingWithdrawalLabel.Visibility = Visibility.Collapsed;
+            }
         }
 
         private void ButtonViewAccount_Click(object sender, RoutedEventArgs e)
@@ -42,7 +66,14 @@ namespace EasyATM
 
         private void ButtonFinish_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new LoginPage());
+            if (this.client.HasPendingWidthdrawls)
+            {
+                this.NavigationService.Navigate(new DispensingCash());
+            }
+            else
+            {
+                this.NavigationService.Navigate(new LoginPage());
+            }
         }
 
         private void ButtonWithdrawal_Click(object sender, RoutedEventArgs e)
@@ -56,7 +87,7 @@ namespace EasyATM
             this.NavigationService.Navigate(new Transfer(this, this));
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void ButtonDeposit_Click(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new AccountSelect(this, AccountSelectType.Deposit));
         }
@@ -64,6 +95,22 @@ namespace EasyATM
         private void ButtonPrint_Click(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new PrintAccountSelect(this));
+        }
+
+        private void Page_GotFocus(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Debug.WriteLine("Got Focus");
+        }
+
+        private void Page_Initialized(object sender, EventArgs e)
+        {
+            System.Diagnostics.Debug.WriteLine("Initialized");
+
+        }
+
+        private void Page_LostFocus(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Debug.WriteLine("Lost Focus");
         }
     }
 }

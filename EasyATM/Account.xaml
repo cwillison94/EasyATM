@@ -18,7 +18,7 @@
 
         <Label Content="Account:&#xD;&#xA;" HorizontalAlignment="Left" Margin="34,80,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" FontSize="20" Height="38"/>
         <Label x:Name="AccountMessage" HorizontalAlignment="Left" Margin="125,80,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" FontSize="20" Height="38"/>
-        <Button Margin="10,0,0,10" Background="#FFE8FF00" Click="ButtonBack_Click" Width="200" Height="70" VerticalAlignment="Bottom" HorizontalAlignment="Left">
+        <Button Margin="10,0,0,10" Background="#FFE8FF00" Click="ButtonBack_Click" Width="200" Height="80" VerticalAlignment="Bottom" HorizontalAlignment="Left">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
@@ -48,31 +48,31 @@
         <Label Content="Balance:&#xA;" HorizontalAlignment="Left" Margin="34,108,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" FontSize="20" Height="38"/>
         <Label x:Name="BalanceLabel" HorizontalAlignment="Left" Margin="125,110,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" FontSize="20" Height="38"/>
 
-        <Button Content="Withdraw" Click="ButtonWithdraw_Click"  Margin="0,130,96,0" Width="220" Height="70" HorizontalAlignment="Right" FontFamily="Segoe UI Black" FontSize="22" RenderTransformOrigin="0.368,-0.155" VerticalAlignment="Top">
+        <Button Content="Withdraw" Click="ButtonWithdraw_Click"  Margin="0,130,96,0" Width="220" Height="80" HorizontalAlignment="Right" FontFamily="Segoe UI Black" FontSize="22" RenderTransformOrigin="0.368,-0.155" VerticalAlignment="Top">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
 
-        <Button Content="Deposit" Click="ButtonDeposit_Click"  Margin="0,220,96,0" Width="220" Height="70" HorizontalAlignment="Right" FontFamily="Segoe UI Black" FontSize="22" RenderTransformOrigin="0.368,-0.155" VerticalAlignment="Top">
+        <Button Content="Deposit" Click="ButtonDeposit_Click"  Margin="0,220,96,0" Width="220" Height="80" HorizontalAlignment="Right" FontFamily="Segoe UI Black" FontSize="22" RenderTransformOrigin="0.368,-0.155" VerticalAlignment="Top">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
 
-        <Button Content="Transfer To" Click="ButtonTransferTo_Click"  Margin="0,309,96,0" Width="220" Height="70" HorizontalAlignment="Right" FontFamily="Segoe UI Black" FontSize="22" RenderTransformOrigin="0.368,-0.155" VerticalAlignment="Top">
+        <Button Content="Transfer To" Click="ButtonTransferTo_Click"  Margin="0,310,96,0" Width="220" Height="80" HorizontalAlignment="Right" FontFamily="Segoe UI Black" FontSize="22" RenderTransformOrigin="0.368,-0.155" VerticalAlignment="Top">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
 
-        <Button Content="Transfer From" Click="ButtonTransferFrom_Click" Margin="0,401,96,0" Width="220" Height="70" HorizontalAlignment="Right" FontFamily="Segoe UI Black" FontSize="22" RenderTransformOrigin="0.368,-0.155" VerticalAlignment="Top">
+        <Button Content="Transfer From" Click="ButtonTransferFrom_Click" Margin="0,400,96,0" Width="220" Height="80" HorizontalAlignment="Right" FontFamily="Segoe UI Black" FontSize="22" RenderTransformOrigin="0.368,-0.155" VerticalAlignment="Top">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
 
-        <Button x:Name="ButtonPrint" Content="Print" Margin="0,490,96,0" Width="220" Height="70" HorizontalAlignment="Right" FontFamily="Segoe UI Black" FontSize="22" RenderTransformOrigin="0.368,-0.155" VerticalAlignment="Top" Click="ButtonPrint_Click">
+        <Button x:Name="ButtonPrint" Content="Print" Margin="0,490,96,0" Width="220" Height="80" HorizontalAlignment="Right" FontFamily="Segoe UI Black" FontSize="22" RenderTransformOrigin="0.368,-0.155" VerticalAlignment="Top" Click="ButtonPrint_Click">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>

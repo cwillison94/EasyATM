@@ -49,5 +49,10 @@ namespace EasyATM
         {
             NavigationService.Navigate(new PrintAccounts(this.session));
         }
+
+        private void ButtonBack_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(this.session);
+        }
     }
 }

@@ -34,3 +34,11 @@ Withdrawal Confirmation:
 - change verbiage to "Confirm" instead of "Accept" 
 - add account information ie. Withdrawal of $80 from Savings 121212122
 
+
+TODO:
+Deposit:
+-accpet button needs to be disabled with no input
+
+Back button on print balance page
+
+

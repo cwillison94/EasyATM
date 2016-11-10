@@ -25,13 +25,15 @@ namespace EasyATM
         float amount;
         OptionsPage session;
         int accountNumber;
+        private Page previousPage;
 
-        public DepositConfirmation(OptionsPage session, float amount, int accountNumber)
+        public DepositConfirmation(OptionsPage session, Page previousPage, float amount, int accountNumber)
         {
             InitializeComponent();
             this.session = session;
             this.amount = amount;
             this.accountNumber = accountNumber;
+            this.previousPage = previousPage;
             this.labelAmount.Content = "$" + amount.ToString() + " CAD";
         }
 
@@ -44,7 +46,7 @@ namespace EasyATM
 
         private void buttonCancel_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(session);
+            NavigationService.Navigate(this.previousPage);
         }
     }
 }

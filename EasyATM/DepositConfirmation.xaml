@@ -17,16 +17,22 @@
         </Grid.Background>
         <Label x:Name="label" Content="To complete deposit of:" HorizontalAlignment="Center" Height="92" Margin="0,0,0,500" VerticalAlignment="Center" Width="494" FontSize="36" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold"/>
         <Label x:Name="labelAmount" Content="$ 0 CAD" HorizontalAlignment="Center" Height="92" Margin="0,0,0,350" VerticalAlignment="Center" Width="494" FontSize="36" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-        <Label x:Name="label_Copy1" Content="Please put all items to be deposited in one of&#xD;&#xA;the provided envelopes and &#xD;&#xA;insert it into the machine." HorizontalAlignment="Center" Height="200" Margin="0,0,0,80" VerticalAlignment="Center" Width="800" FontSize="36" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <TextBlock Text="Please put all items to be deposited in one of&#xD;&#xA;the provided envelopes and &#xD;&#xA;insert it into the machine." TextAlignment="Center" HorizontalAlignment="Center" Height="200" Margin="0,0,0,80" VerticalAlignment="Center" Width="800" FontSize="36"></TextBlock>
+        <!--<Label x:Name="label_Copy1" Content="Please put all items to be deposited in one of&#xD;&#xA;the provided envelopes and &#xD;&#xA;insert it into the machine." HorizontalAlignment="Center" Height="200" Margin="0,0,0,80" VerticalAlignment="Center" Width="800" FontSize="36" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>-->
         <Button x:Name="btnSwipeCard" Content="Human Action:&#xA;Insert Envelope" HorizontalAlignment="Center" Height="165" Margin="0,0,0,10" VerticalAlignment="Bottom" Width="297" FontSize="24" FontWeight="Bold" Background="#FFE49BF9" Click="btnInsertEnv_Click">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
-        <Button x:Name="buttonCancel" Content="Cancel" HorizontalAlignment="Left" Height="70" Margin="10,0,0,10" VerticalAlignment="Bottom" Width="200" Background="#FFF32C0C" FontSize="22" Click="buttonCancel_Click" FontFamily="Segoe UI Black">
+
+
+        <Button Margin="10,0,0,10" Background="#FFF32C0C" Click="buttonCancel_Click" Width="200" Height="80" VerticalAlignment="Bottom" HorizontalAlignment="Left">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
+            <StackPanel HorizontalAlignment="Center">
+                <Image Source="/Resources/back.png" Height="66" Width="94" VerticalAlignment="Bottom" />
+            </StackPanel>
         </Button>
 
     </Grid>

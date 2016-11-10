@@ -16,7 +16,7 @@
             </LinearGradientBrush>
         </Grid.Background>
         <Label Content="EasyBank" HorizontalAlignment="Left" Margin="34,30,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" FontSize="36"/>
-        <Label x:Name="AccountSelectLabel" Content="Please Remove Printed Balance(s) From Machine" HorizontalAlignment="Center" Margin="0,86,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" FontSize="36"/>
+        <Label x:Name="AccountSelectLabel" Content="Please Remove Printed Balance(s) From Machine" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" FontFamily="Segoe UI Black" FontSize="36"/>
         <Button x:Name="btnRemovePrint" Content="Human Action:&#xA;Remove Printed Balance" HorizontalAlignment="Center" Height="165" Margin="0,0,0,10" VerticalAlignment="Bottom" Width="297" FontSize="24" FontWeight="Bold" Background="#FFE49BF9" Click="btnRemovePrint_Click">
             <Button.Effect>
                 <DropShadowEffect/>

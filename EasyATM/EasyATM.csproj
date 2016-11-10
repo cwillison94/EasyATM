@@ -65,9 +65,6 @@
     <Compile Include="DepositConfirmation.xaml.cs">
       <DependentUpon>DepositConfirmation.xaml</DependentUpon>
     </Compile>
-    <Compile Include="DepositOptions.xaml.cs">
-      <DependentUpon>DepositOptions.xaml</DependentUpon>
-    </Compile>
     <Compile Include="DepositPage.xaml.cs">
       <DependentUpon>DepositPage.xaml</DependentUpon>
     </Compile>
@@ -81,6 +78,12 @@
     <Compile Include="Models\DenominationModifier.cs" />
     <Compile Include="Models\DisableNavigation.cs" />
     <Compile Include="Models\NativeMethods.cs" />
+    <Compile Include="PrintAccounts.xaml.cs">
+      <DependentUpon>PrintAccounts.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PrintAccountSelect.xaml.cs">
+      <DependentUpon>PrintAccountSelect.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Service\ClientAccessManager.cs" />
     <Compile Include="Transfer.xaml.cs">
       <DependentUpon>Transfer.xaml</DependentUpon>
@@ -107,10 +110,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="DepositConfirmation.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="DepositOptions.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -148,6 +147,14 @@
     <Page Include="OptionsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PrintAccounts.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PrintAccountSelect.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Transfer.xaml">
       <SubType>Designer</SubType>

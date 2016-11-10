@@ -30,7 +30,7 @@ namespace EasyATM
 
         private void btnRemovePrint_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new ContinuePage(session, true));
+            NavigationService.Navigate(session);
         }
     }
 }

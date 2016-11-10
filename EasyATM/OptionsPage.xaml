@@ -4,7 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       mc:Ignorable="d" 
-	Title="OptionsPage" d:DesignWidth="1100" d:DesignHeight="750">
+	Title="OptionsPage" d:DesignWidth="1100" d:DesignHeight="750" Initialized="Page_Initialized">
     <Grid>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
@@ -19,9 +19,9 @@
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
                     <Border BorderBrush="Black" BorderThickness="0,0,0,2" VerticalAlignment="Top">
-                        <DockPanel Margin="5,5,5,0" Background="{x:Null}">
+                        <DockPanel Margin="0,35,0,0" Background="{x:Null}">
                             <Label Content="{Binding Type}"  />
-                            <Button Click="ButtonViewAccount_Click" Tag="{Binding AccountNumber}" Content="View Details" Margin="20,0,0,0" Width="220" Background="#FF096200" FontFamily="Segoe UI Black" Foreground="White" BorderBrush="#FFD6D6D6" HorizontalAlignment="Right" VerticalAlignment="Center" DockPanel.Dock="Right">
+                            <Button Click="ButtonViewAccount_Click" Tag="{Binding AccountNumber}" Content="View Details" Margin="20,0,0,0" Width="220" Height="40" Background="#FF096200" FontFamily="Segoe UI Black" Foreground="White" BorderBrush="#FFD6D6D6" HorizontalAlignment="Right" VerticalAlignment="Center" DockPanel.Dock="Right">
                             </Button>
                             <Label HorizontalContentAlignment="Right"  Content="{Binding AccountNumber}" DockPanel.Dock="Right"/>
 
@@ -32,7 +32,7 @@
         </ItemsControl>
         <Label Content="Accounts:&#xD;&#xA;" HorizontalAlignment="Left" Margin="34,80,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" FontSize="20" Height="38"/>
 
-        <Button Content="Logout" Margin="10,1,0,10" Background="#FFF32C0C" Click="ButtonFinish_Click" Width="200" Height="70" VerticalAlignment="Bottom" HorizontalAlignment="Left" FontFamily="Segoe UI Black" FontSize="22">
+        <Button Content="Logout" Margin="10,1,0,10" Background="#FFF32C0C" Click="ButtonFinish_Click" Width="200" Height="80" VerticalAlignment="Bottom" HorizontalAlignment="Left" FontFamily="Segoe UI Black" FontSize="22">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
@@ -41,26 +41,45 @@
             </StackPanel>
             -->
         </Button>
-        <Button Content="Withdrawal" Click="ButtonWithdrawal_Click"  Margin="300,133,0,0" Width="220" Height="70" HorizontalAlignment="Center" FontFamily="Segoe UI Black" FontSize="22" RenderTransformOrigin="0.368,-0.155" VerticalAlignment="Top">
+        <Button Content="Withdrawal" Click="ButtonWithdrawal_Click"  Margin="0,130,96,0" Width="220" Height="80" HorizontalAlignment="Right" FontFamily="Segoe UI Black" FontSize="22" RenderTransformOrigin="0.368,-0.155" VerticalAlignment="Top">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
-        <Button Content="Deposit" Margin="770,133,0,0" Width="220" Height="70" HorizontalAlignment="Center" FontFamily="Segoe UI Black" FontSize="22" RenderTransformOrigin="0.368,-0.155" VerticalAlignment="Top" Click="Button_Click">
+        <Button Content="Deposit" Margin="0,220,96,0" Width="220" Height="80" HorizontalAlignment="Right" FontFamily="Segoe UI Black" FontSize="22" RenderTransformOrigin="0.368,-0.155" VerticalAlignment="Top" Click="ButtonDeposit_Click">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
-        <Button Content="Transfer" Click="ButtonTransfer_Click" Margin="300,220,0,0" Width="220" Height="70" HorizontalAlignment="Center" FontFamily="Segoe UI Black" FontSize="22" RenderTransformOrigin="0.368,-0.155" VerticalAlignment="Top">
+        <Button Content="Transfer" Click="ButtonTransfer_Click" Margin="0,400,96,0" Width="220" Height="80" HorizontalAlignment="Right" FontFamily="Segoe UI Black" FontSize="22" RenderTransformOrigin="0.368,-0.155" VerticalAlignment="Top">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
-        <Button Content="Print Balances" Click="ButtonPrint_Click" Margin="770,220,0,0" Width="220" Height="70" HorizontalAlignment="Center" FontFamily="Segoe UI Black" FontSize="22" RenderTransformOrigin="0.368,-0.155" VerticalAlignment="Top">
+        <Button Content="Print Balances" Click="ButtonPrint_Click" Margin="0,310,96,0" Width="220" Height="80" HorizontalAlignment="Right" FontFamily="Segoe UI Black" FontSize="22" RenderTransformOrigin="0.368,-0.155" VerticalAlignment="Top">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
 
+        <Label x:Name="PendingWithdrawalLabel" Content="Pending Withdrawal(s):&#xD;&#xA;" HorizontalAlignment="Left" Margin="30,0,0,245" VerticalAlignment="Bottom" FontFamily="Segoe UI Black" FontSize="20" Height="38" Width="245"/>
+
+        <ListView x:Name="PendingListView" Margin="40,0,411,215" VerticalAlignment="Bottom" Foreground="Black" FontSize="20">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Date" DisplayMemberBinding="{Binding Date}" />
+                    <GridViewColumn Header="Description"  DisplayMemberBinding="{Binding Description}" />
+                    <GridViewColumn Header="Amount" >
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding AmountFormatted}" Foreground="{Binding AmountColour}" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+
+                    <GridViewColumn Header="Type" DisplayMemberBinding="{Binding Type}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
     </Grid>
 </Page>

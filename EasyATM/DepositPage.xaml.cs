@@ -33,6 +33,7 @@ namespace EasyATM
             this.accountNumber = accountNumber;
             InitializeComponent();
 
+            this.buttonAccept.IsEnabled = false;
         }
         private void updateDepositAmount(string i)
         {
@@ -128,13 +129,28 @@ namespace EasyATM
 
             if (float.TryParse(DepositAmount.Text, out depositAmount))
             {
-                NavigationService.Navigate(new DepositConfirmation(session, depositAmount, accountNumber));
+                NavigationService.Navigate(new DepositConfirmation(session, this, depositAmount, accountNumber));
             }          
         }
 
         private void buttonCancel_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(session);
+        }
+
+        private void DepositAmount_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            var depositText = this.DepositAmount.Text;
+            if (depositText.Length != 0)
+            {
+                if (depositText != ".")
+                    this.buttonAccept.IsEnabled = true;
+            }
+            else
+            {
+                
+                this.buttonAccept.IsEnabled = false;
+            }
         }
     }
 }

@@ -15,6 +15,16 @@ namespace EasyATM.Models
     {
         private List<EasyBankAccount> accounts = new List<EasyBankAccount>();
 
+        private List<TransactionItem> pendingWithdrawals = new List<TransactionItem>();
+
+        public bool HasPendingWidthdrawls
+        {
+            get
+            {
+                return this.pendingWithdrawals.Count > 0;
+            }
+        }
+
         public string FirstName { private set; get; }
         public string LastName { private set; get; }
 
@@ -49,6 +59,16 @@ namespace EasyATM.Models
         public List<EasyBankAccount> ListAccounts()
         {
             return this.accounts;
+        }
+
+        public List<TransactionItem> ListPendingWithdrawals()
+        {
+            return this.pendingWithdrawals;
+        }
+
+        public void AddPendingWithdrawal(TransactionItem item)
+        {
+            this.pendingWithdrawals.Add(item);
         }
 
         public EasyBankAccount GetAccount(int accountNumber)

@@ -24,11 +24,13 @@ namespace EasyATM
         OptionsPage session;
         private EasyBankAccount account;
         private int amount;
+        private Page previousPage;
 
-        public WithdrawalConfirmation(OptionsPage session, EasyBankAccount account, int amount)
+        public WithdrawalConfirmation(OptionsPage session, Page previousPage, EasyBankAccount account, int amount)
         {
             InitializeComponent();
             this.session = session;
+            this.previousPage = previousPage;
             this.amount = amount;
             label_WithdrawConfirmAmount.Content = "$" + amount.ToString() + " CAD";
             this.account = account;
@@ -41,7 +43,7 @@ namespace EasyATM
 
         private void ButtonNo_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(session);
+            this.NavigationService.Navigate(this.previousPage);
         }
     }
 }

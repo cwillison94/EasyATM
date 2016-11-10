@@ -130,7 +130,7 @@ namespace EasyATM
 
         private void buttonAccept_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new WithdrawalConfirmation(session, this.account, this.TotalValue));
+            this.NavigationService.Navigate(new WithdrawalConfirmation(session, this, this.account, this.TotalValue));
             resetCounts();
             // TODO: Implenent continue page
             //this.NavigationService.Navigate(new ContinuePage(this.client));

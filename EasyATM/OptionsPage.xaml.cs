@@ -53,7 +53,7 @@ namespace EasyATM
 
         private void ButtonTransfer_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Transfer(this));
+            this.NavigationService.Navigate(new Transfer(this, this));
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

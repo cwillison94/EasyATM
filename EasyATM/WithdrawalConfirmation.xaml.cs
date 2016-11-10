@@ -28,6 +28,7 @@ namespace EasyATM
         public WithdrawalConfirmation(OptionsPage session, EasyBankAccount account, int amount)
         {
             InitializeComponent();
+            StateTracker.Instance.CurrentPage = this;
             this.session = session;
             this.amount = amount;
             label_WithdrawConfirmAmount.Content = "$" + amount.ToString() + " CAD";

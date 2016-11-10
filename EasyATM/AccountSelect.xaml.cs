@@ -37,6 +37,8 @@ namespace EasyATM
         {
             InitializeComponent();
 
+            StateTracker.Instance.CurrentPage = this;
+            
             this.session = session;
             this.type = type;
             this.client = session.client;

@@ -28,7 +28,7 @@
         <Button Content="DEL" HorizontalAlignment="Center" Margin="-200,0,0,-270" VerticalAlignment="Center" Width="80" Height="80" FontFamily="Segoe UI Black" FontSize="24" Click="btnBack_Click"/>
         <Button Content="0" HorizontalAlignment="Center" Margin="0,0,0,-270" VerticalAlignment="Center" Width="80" Height="80" FontFamily="Segoe UI Black" FontSize="24" Click="btn0_Click"/>
         <Button x:Name="btnLogin" Content="OK" HorizontalAlignment="Center" Margin="0,0,-200,-270" VerticalAlignment="Center" Width="80" Height="80" FontFamily="Segoe UI Black" FontSize="24" Click="btnLogin_Click" IsEnabled="False"/>
-        <Button x:Name="btnSwipeCard" Content="Human Action:&#xD;&#xA;Swipe Card" HorizontalAlignment="Center" Height="165" Margin="700,500,0,0" VerticalAlignment="Center" Width="297" FontSize="24" FontWeight="Bold" Background="#FFE49BF9" Click="btnSwipeCard_Click">
+        <Button x:Name="btnSwipeCard" Content="Human Action:&#xD;&#xA;Swipe Card" HorizontalAlignment="Right" Height="165" Margin="10,0,10,10" VerticalAlignment="Bottom" Width="297" FontSize="24" FontWeight="Bold" Background="#FFE49BF9" Click="btnSwipeCard_Click">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>

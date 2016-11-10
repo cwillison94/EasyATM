@@ -24,10 +24,12 @@ namespace EasyATM
     {
         private EasyBankAccount selectedAccount = null;
         private Client selectedClient = null;
+        private OptionsPage session;
 
-        public Account(Client client, int accountNumber)
+        public Account(OptionsPage session, Client client, int accountNumber)
         {
             InitializeComponent();
+            this.session = session;
             this.selectedClient = client;
             this.selectedAccount = client.ListAccounts().First(x => x.AccountNumber == accountNumber);
             this.AccountMessage.Content = this.selectedAccount.Type + " - " + this.selectedAccount.AccountNumber;
@@ -37,7 +39,28 @@ namespace EasyATM
 
         private void ButtonBack_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new OptionsPage(this.selectedClient));
+            this.NavigationService.Navigate(StateTracker.Instance.PreviousPage);
+            //this.NavigationService.Navigate(new OptionsPage(this.selectedClient));
+        }
+
+        private void ButtonDeposit_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new DepositPage(this.session, this.selectedAccount.AccountNumber));
+        }
+
+        private void ButtonWithdraw_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Withdrawal(this.session, this.selectedAccount.AccountNumber));
+        }
+
+        private void ButtonTransferTo_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Transfer(this.session, selectedToAccount: this.selectedAccount));
+        }
+
+        private void ButtonTransferFrom_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Transfer(this.session, selectedFromAccount: this.selectedAccount));
         }
     }
 }

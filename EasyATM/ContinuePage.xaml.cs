@@ -27,6 +27,9 @@ namespace EasyATM
         public ContinuePage(OptionsPage session, bool success, bool withdrawRequired = false, string yesHint = "", string noHint = "")
         {
             InitializeComponent();
+
+            StateTracker.Instance.CurrentPage = this;
+
             this.withdrawRequired = withdrawRequired;
             this.YesActionHint.Text = yesHint;
             this.NoActionHint.Text = noHint;

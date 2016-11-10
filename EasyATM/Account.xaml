@@ -26,19 +26,57 @@
                 <Image Source="/Resources/back.png" Height="66" Width="94" VerticalAlignment="Bottom" />
             </StackPanel>
         </Button>
-        <ListView x:Name="HistoryListView" Margin="40,156,403,0" VerticalAlignment="Top" Foreground="Black">
+        <ListView x:Name="HistoryListView" Margin="40,146,411,0" VerticalAlignment="Top" Foreground="Black" FontSize="20">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Date" DisplayMemberBinding="{Binding Date}" />
                     <GridViewColumn Header="Description"  DisplayMemberBinding="{Binding Description}" />
-                    <GridViewColumn Header="Amount" DisplayMemberBinding="{Binding AmountFormatted}" />
+                    <GridViewColumn Header="Amount" >
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding AmountFormatted}" Foreground="{Binding AmountColour}" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    
                     <GridViewColumn Header="Type" DisplayMemberBinding="{Binding Type}" />
+
 
                 </GridView>
             </ListView.View>
         </ListView>
         <Label Content="Balance:&#xA;" HorizontalAlignment="Left" Margin="34,108,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" FontSize="20" Height="38"/>
         <Label x:Name="BalanceLabel" HorizontalAlignment="Left" Margin="125,110,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" FontSize="20" Height="38"/>
+
+        <Button Content="Withdraw" Click="ButtonWithdraw_Click"  Margin="0,130,96,0" Width="220" Height="70" HorizontalAlignment="Right" FontFamily="Segoe UI Black" FontSize="22" RenderTransformOrigin="0.368,-0.155" VerticalAlignment="Top">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+
+        <Button Content="Deposit" Click="ButtonDeposit_Click"  Margin="0,220,96,0" Width="220" Height="70" HorizontalAlignment="Right" FontFamily="Segoe UI Black" FontSize="22" RenderTransformOrigin="0.368,-0.155" VerticalAlignment="Top">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+
+        <Button Content="Transfer To" Click="ButtonTransferTo_Click"  Margin="0,309,96,0" Width="220" Height="70" HorizontalAlignment="Right" FontFamily="Segoe UI Black" FontSize="22" RenderTransformOrigin="0.368,-0.155" VerticalAlignment="Top">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+
+        <Button Content="Transfer From" Click="ButtonTransferFrom_Click" Margin="0,401,96,0" Width="220" Height="70" HorizontalAlignment="Right" FontFamily="Segoe UI Black" FontSize="22" RenderTransformOrigin="0.368,-0.155" VerticalAlignment="Top">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+
+        <Button Content="Print" Margin="0,490,96,0" Width="220" Height="70" HorizontalAlignment="Right" FontFamily="Segoe UI Black" FontSize="22" RenderTransformOrigin="0.368,-0.155" VerticalAlignment="Top">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
 
     </Grid>
 </Page>

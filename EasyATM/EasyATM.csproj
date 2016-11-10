@@ -62,6 +62,9 @@
     <Compile Include="ContinuePage.xaml.cs">
       <DependentUpon>ContinuePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DepositConfirmation.xaml.cs">
+      <DependentUpon>DepositConfirmation.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DepositOptions.xaml.cs">
       <DependentUpon>DepositOptions.xaml</DependentUpon>
     </Compile>
@@ -78,6 +81,7 @@
     <Compile Include="Models\DenominationModifier.cs" />
     <Compile Include="Models\DisableNavigation.cs" />
     <Compile Include="Models\NativeMethods.cs" />
+    <Compile Include="Models\StateTracker.cs" />
     <Compile Include="Service\ClientAccessManager.cs" />
     <Compile Include="Transfer.xaml.cs">
       <DependentUpon>Transfer.xaml</DependentUpon>
@@ -102,6 +106,10 @@
     <Page Include="ContinuePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DepositConfirmation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="DepositOptions.xaml">
       <Generator>MSBuild:Compile</Generator>

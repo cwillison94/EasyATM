@@ -40,6 +40,7 @@ namespace EasyATM
         public Withdrawal(OptionsPage session, int accountNumber)
         {
             InitializeComponent();
+            StateTracker.Instance.CurrentPage = this;
 
             this.session = session;
             this.account = this.session.client.GetAccount(accountNumber);
@@ -61,7 +62,7 @@ namespace EasyATM
 
         private void ButtonBack_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(session);
+            this.NavigationService.Navigate(StateTracker.Instance.PreviousPage);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

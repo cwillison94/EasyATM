@@ -28,6 +28,8 @@ namespace EasyATM
             this.session = session;
             this.accountNumber = accountNumber;
             InitializeComponent();
+
+            StateTracker.Instance.CurrentPage = this;
         }
 
         private void btnCash_Click(object sender, RoutedEventArgs e)
@@ -42,7 +44,7 @@ namespace EasyATM
 
         private void ButtonBack_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(session);
+            this.NavigationService.Navigate(StateTracker.Instance.PreviousPage);
         }
     }
 }

@@ -24,6 +24,7 @@ namespace EasyATM
         public LoginPage()
         {
             InitializeComponent();
+            StateTracker.Instance.CurrentPage = this;
             AccountNumber.Text = "------";
         }
 

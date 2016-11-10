@@ -34,6 +34,16 @@ namespace EasyATM.Models
                 return this.Amount.ToString("C");
             }
         }
+        public string AmountColour
+        {
+            get
+            {
+                if (this.Amount < 0)
+                    return "#FFE61111"; // red
+                else
+                    return "#FF32a81e"; // blue
+            }
+        }
     }
 
     public class EasyBankAccount

@@ -1,4 +1,4 @@
-Account History:
+DONE: Account History:
 
 -Date
 -Description
@@ -6,8 +6,8 @@ Account History:
 -Amount (+/-)
 
 
-PIN Page:
--Add cancel button
+DONE: PIN Page:
+DONE -Add cancel button
 
 Deposit:
 -Add Back button
@@ -17,7 +17,7 @@ Deposit:
 -ADD Deposit Confirmation page:
 	-with accept and ask user to insert envelope
 
-Account History Page:
+DONE: Account History Page:
 - move account tpye and balance leftward
 - Quick access to withdraw, deposit, transfer, print
 

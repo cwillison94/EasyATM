@@ -22,10 +22,12 @@ namespace EasyATM
     {
         OptionsPage session;
         int accountNumber;
+        private Page previousPage;
 
-        public DepositOptions(OptionsPage session, int accountNumber)
+        public DepositOptions(OptionsPage session, Page previousPage, int accountNumber)
         {
             this.session = session;
+            this.previousPage = previousPage;
             this.accountNumber = accountNumber;
             InitializeComponent();
 
@@ -43,7 +45,7 @@ namespace EasyATM
 
         private void ButtonBack_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(this.session);
+            this.NavigationService.Navigate(this.previousPage);
         }
     }
 }

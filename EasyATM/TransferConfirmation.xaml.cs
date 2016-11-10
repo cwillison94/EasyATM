@@ -30,7 +30,7 @@ namespace EasyATM
         public TransferConfirmation(OptionsPage session, Transfer transferSession, EasyBankAccount fromAccount, EasyBankAccount toAccount, float transferAmount)
         {
             InitializeComponent();
-            
+
             this.session = session;
             this.transferSession = transferSession;
             this.fromAccount = fromAccount;
@@ -48,5 +48,6 @@ namespace EasyATM
         private void ButtonNo_Click(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(this.transferSession);
-        }    }
+        }
+    }
 }

@@ -37,13 +37,17 @@ namespace EasyATM
         private int count_50;
         private int count_100;
 
-        public Withdrawal(OptionsPage session, int accountNumber)
+        private Page previousPage;
+
+        public Withdrawal(OptionsPage session, Page previousPage, int accountNumber)
         {
             InitializeComponent();
 
             this.session = session;
+            this.previousPage = previousPage;
             this.account = this.session.client.GetAccount(accountNumber);
-            this.AccountMessageLabel.Content = this.session.client.FullName + " : " + this.account.ToString();
+            this.AccountMessage.Content = this.account.Type + " - " + this.account.AccountNumber;
+            this.BalanceLabel.Content = this.account.BalanceFormatted;
 
             count_5 = 0;
             count_10 = 0;
@@ -61,7 +65,7 @@ namespace EasyATM
 
         private void ButtonBack_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(this.session);
+            this.NavigationService.Navigate(this.previousPage);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -127,7 +131,7 @@ namespace EasyATM
 
         private void buttonAccept_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new WithdrawalConfirmation(session, this.account, this.TotalValue));
+            this.NavigationService.Navigate(new WithdrawalConfirmation(session, this, this.account, this.TotalValue));
             resetCounts();
             // TODO: Implenent continue page
             //this.NavigationService.Navigate(new ContinuePage(this.client));

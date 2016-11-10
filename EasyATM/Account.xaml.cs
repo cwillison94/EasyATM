@@ -49,17 +49,17 @@ namespace EasyATM
 
         private void ButtonWithdraw_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Withdrawal(this.session, this.selectedAccount.AccountNumber));
+            this.NavigationService.Navigate(new Withdrawal(this.session, this, this.selectedAccount.AccountNumber));
         }
 
         private void ButtonTransferTo_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Transfer(this.session, selectedToAccount: this.selectedAccount));
+            this.NavigationService.Navigate(new Transfer(this.session,this, selectedToAccount: this.selectedAccount));
         }
 
         private void ButtonTransferFrom_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Transfer(this.session, selectedFromAccount: this.selectedAccount));
+            this.NavigationService.Navigate(new Transfer(this.session, this, selectedFromAccount: this.selectedAccount));
         }
     }
 }

@@ -28,11 +28,13 @@ namespace EasyATM
         private EasyBankAccount selectedToAccount;
         private EasyBankAccount selectedFromAccount;
 
-        public Transfer(OptionsPage session, EasyBankAccount selectedFromAccount = null, EasyBankAccount selectedToAccount = null)
+        private Page previousPage;
+
+        public Transfer(OptionsPage session, Page previousPage, EasyBankAccount selectedFromAccount = null, EasyBankAccount selectedToAccount = null)
         {
             InitializeComponent();
             this.session = session;
-
+            this.previousPage = previousPage;
             this.selectedFromAccount = selectedFromAccount;
             this.selectedToAccount = selectedToAccount;
 
@@ -211,7 +213,7 @@ namespace EasyATM
 
         private void ButtonBack_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(this.session);
+            this.NavigationService.Navigate(this.previousPage);
 
             //this.NavigationService.Navigate(this.session);
         }

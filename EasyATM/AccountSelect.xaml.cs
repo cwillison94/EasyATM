@@ -65,11 +65,11 @@ namespace EasyATM
             switch (this.type)
             {
                 case AccountSelectType.Withdrawal:
-                    this.NavigationService.Navigate(new Withdrawal(session, accountNumber));
+                    this.NavigationService.Navigate(new Withdrawal(session, this, accountNumber));
                     break;
                 case AccountSelectType.Deposit:
                     
-                    this.NavigationService.Navigate(new DepositOptions(session, accountNumber));
+                    this.NavigationService.Navigate(new DepositOptions(session, this, accountNumber));
 
                     break;
             }

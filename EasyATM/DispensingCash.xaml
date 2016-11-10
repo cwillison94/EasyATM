@@ -21,7 +21,7 @@
 
         <Label Content="Dispensing Cash..." HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" FontFamily="Segoe UI Black" FontSize="48"/>
 
-        <Button Content="Human Action: TAKE CASH " Click="ButtonHumanAction_Click" Margin="0,0,0,10" Background="#FFFF52B8" Width="362" Height="80" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="22" FontFamily="Segoe UI Black">
+        <Button Content="Human Action: TAKE CASH " Click="ButtonHumanAction_Click" Margin="0,0,0,10" Background="#FFE49BF9" Width="362" Height="150" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="22" FontFamily="Segoe UI Black">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>

@@ -56,6 +56,11 @@
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
+        <Button Content="Print Balances" Click="ButtonPrint_Click" Margin="770,220,0,0" Width="220" Height="70" HorizontalAlignment="Center" FontFamily="Segoe UI Black" FontSize="22" RenderTransformOrigin="0.368,-0.155" VerticalAlignment="Top">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
 
     </Grid>
 </Page>

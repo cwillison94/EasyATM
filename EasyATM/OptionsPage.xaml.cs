@@ -60,5 +60,10 @@ namespace EasyATM
         {
             this.NavigationService.Navigate(new AccountSelect(this, AccountSelectType.Deposit));
         }
+
+        private void ButtonPrint_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new PrintAccountSelect(this));
+        }
     }
 }

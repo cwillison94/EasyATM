@@ -25,7 +25,6 @@ namespace EasyATM
         public DispensingCash()
         {
             InitializeComponent();
-            StateTracker.Instance.CurrentPage = this;
         }
 
         private void ButtonHumanAction_Click(object sender, RoutedEventArgs e)

@@ -39,8 +39,7 @@ namespace EasyATM
 
         private void ButtonBack_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(StateTracker.Instance.PreviousPage);
-            //this.NavigationService.Navigate(new OptionsPage(this.selectedClient));
+            this.NavigationService.Navigate(new OptionsPage(this.selectedClient));
         }
 
         private void ButtonDeposit_Click(object sender, RoutedEventArgs e)

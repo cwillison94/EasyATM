@@ -26,9 +26,7 @@ namespace EasyATM
         public OptionsPage(Client client)
         {
             this.client = client;
-            InitializeComponent();
-            StateTracker.Instance.CurrentPage = this;
-       
+            InitializeComponent();       
             this.WelcomeMessage.Content = client.WelcomeMessage;
 
             this.AccountItemControl.ItemsSource = this.client.ListAccounts();
@@ -61,11 +59,6 @@ namespace EasyATM
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new AccountSelect(this, AccountSelectType.Deposit));
-        }
-
-        private void Page_Loaded(object sender, RoutedEventArgs e)
-        {
-            StateTracker.Instance.CurrentPage = this;
         }
     }
 }

@@ -32,9 +32,6 @@ namespace EasyATM
             this.amount = amount;
             this.accountNumber = accountNumber;
             InitializeComponent();
-
-            StateTracker.Instance.CurrentPage = this;
-
         }
 
         private void btnInsertEnv_Click(object sender, RoutedEventArgs e)

@@ -33,7 +33,6 @@ namespace EasyATM
             this.accountNumber = accountNumber;
             InitializeComponent();
 
-            StateTracker.Instance.CurrentPage = this;
         }
         private void updateDepositAmount(string i)
         {

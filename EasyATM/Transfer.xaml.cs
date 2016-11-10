@@ -31,7 +31,6 @@ namespace EasyATM
         public Transfer(OptionsPage session, EasyBankAccount selectedFromAccount = null, EasyBankAccount selectedToAccount = null)
         {
             InitializeComponent();
-            StateTracker.Instance.CurrentPage = this;
             this.session = session;
 
             this.selectedFromAccount = selectedFromAccount;
@@ -212,7 +211,7 @@ namespace EasyATM
 
         private void ButtonBack_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(StateTracker.Instance.PreviousPage);
+            this.NavigationService.Navigate(this.session);
 
             //this.NavigationService.Navigate(this.session);
         }
@@ -220,7 +219,7 @@ namespace EasyATM
         private void ButtonTransfer_Click(object sender, RoutedEventArgs e)
         {
             var transferAmount = GetTransferAmount();
-            this.NavigationService.Navigate(new TransferConfirmation(this.session, this.selectedFromAccount, this.selectedToAccount, transferAmount));
+            this.NavigationService.Navigate(new TransferConfirmation(this.session, this, this.selectedFromAccount, this.selectedToAccount, transferAmount));
         }
 
         private float GetTransferAmount()

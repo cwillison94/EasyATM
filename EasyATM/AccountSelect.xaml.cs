@@ -36,8 +36,6 @@ namespace EasyATM
         public AccountSelect(OptionsPage session, AccountSelectType type)
         {
             InitializeComponent();
-
-            StateTracker.Instance.CurrentPage = this;
             
             this.session = session;
             this.type = type;

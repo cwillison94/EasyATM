@@ -17,8 +17,13 @@
         </Grid.Background>
 
         <Label Content="EasyBank Withdrawal" HorizontalAlignment="Left" Margin="34,30,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" FontSize="36"/>
-        <Label x:Name="AccountMessageLabel" Content="This is the account" HorizontalContentAlignment="Right" Margin="0,49,17,0" VerticalAlignment="Top"  FontSize="20" FontFamily="Segoe UI Black"/>
 
+        <Label Content="Balance:&#xA;" HorizontalAlignment="Left" Margin="34,108,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" FontSize="20" Height="38"/>
+        <Label x:Name="BalanceLabel" HorizontalAlignment="Left" Margin="125,110,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" FontSize="20" Height="38"/>
+        
+        <Label Content="Account:&#xD;&#xA;" HorizontalAlignment="Left" Margin="34,80,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" FontSize="20" Height="38"/>
+        <Label x:Name="AccountMessage" HorizontalAlignment="Left" Margin="125,80,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" FontSize="20" Height="38"/>
+        
         <Label x:Name="countNotes5" Content="0" FontFamily="Segoe UI Black" FontSize="48" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="-550,107,0,0" Height="68" Width="70" VerticalAlignment="Top"/>
 
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="-550,172,0,0" VerticalAlignment="Top" Height="92" Width="312">

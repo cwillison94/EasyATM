@@ -46,7 +46,8 @@ namespace EasyATM
             this.session = session;
             this.previousPage = previousPage;
             this.account = this.session.client.GetAccount(accountNumber);
-            this.AccountMessageLabel.Content = this.session.client.FullName + " : " + this.account.ToString();
+            this.AccountMessage.Content = this.account.Type + " - " + this.account.AccountNumber;
+            this.BalanceLabel.Content = this.account.BalanceFormatted;
 
             count_5 = 0;
             count_10 = 0;

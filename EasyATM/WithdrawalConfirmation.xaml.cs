@@ -32,8 +32,10 @@ namespace EasyATM
             this.session = session;
             this.previousPage = previousPage;
             this.amount = amount;
-            label_WithdrawConfirmAmount.Content = "$" + amount.ToString() + " CAD";
             this.account = account;
+
+            label_WithdrawConfirmAmount.Content = this.amount.ToString("C") + " FROM " + this.account.ToString();
+
         }
        
         private void ButtonYes_Click(object sender, RoutedEventArgs e)
